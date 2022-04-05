@@ -4,13 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
 
     <title>VeggiLand</title>
 </head>
 <body>
     <header>
-        <img src="structure/img/V.png"
+        <div class="logo">
+        <img src="img/V.png" alt="logo" title="VeggiLand">
+        <H1>VeggiLand</H1>
+        </div>
+        <nav>
+            <label for="mobile">
+                <img src="img/burger_icon.svg" alt="menu_burger">
+            </label>
+            <input type="checkbox" name="mobile" id="mobile" role="button">
+            <ul>
+                <li ><a href="#" class="bouton_compte"><img src="img/contacts.png" alt="contacts">Mon compte</a></li>
+                <li><a href="#">Agence</a></li>
+                <li><a href="#">Croisières</a></li>
+                <li><a href="#">Séjour</a></li>
+                <li><a href="#">Camping</a></li>
+                <li><a href="#">Visites guidées</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Vol</a></li>
+                <li><a href="#">Bons plans</a></li>
+                <li><a href="#" class="telephone"><img src="img/telephone.jpg">0948141516</a></li>
+            </ul>
+        </nav>
     </header>
+    <main>
+        <h1>
+            Venez vous ressourcer tout en respectant la nature
+        </h1>
+        <img src="img/plage-min.png" id="plage" alt="plage mini" title="plage mini">
+        <form action="post" for="plage.php">
+            <div>
+                <label for="destination">Ou partir</label>
+                <input type="text" name="destination" id="destination" placeholder="Où partir">
+            </div>
+            <div>
+                <label for="start">date</label>
+                <input type="date" name="date" id="start">
+            </div>
+            <input type="submit" value="envoyer">
+        </form>
+
+
+
+
+    </main>
+
     
 </body>
 </html>
