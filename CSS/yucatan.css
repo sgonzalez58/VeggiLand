@@ -1,0 +1,120 @@
+body {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 30px;
+    margin-right: 15px;
+}
+header{
+    display: flex;
+    position: sticky;
+    justify-content: space-around;
+    top:0;
+    padding:10px;
+    background-color: white;
+    align-items: center;
+    z-index: 10;
+}
+nav ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    list-style-type: none;
+    width: 100%;
+    padding-inline-start:0;
+}
+nav input[type=checkbox]:checked + ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav input{
+display: none;
+}
+.bouton_compte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.bouton_compte img{
+    width: 30px;   
+}
+.telephone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.telephone img{
+    width: 30px;
+}
+nav ul li{
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #E9FCF7;
+}
+nav ul li:nth-child(1), nav ul li:last-child{
+    border: none;
+    background-color: white;
+}
+
+.image_presentation{
+    width: 100%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main h1{
+    padding : 20px;
+    background-color: lightgreen;
+}
+
+main > p{
+    padding : 0 10%;
+    text-align: center;
+    background-color: lightcyan;
+}
+
+main div > p{
+    margin : 10px 10px;
+    text-align: center;
+    background-color: lightgray;
+    padding : 10px;
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.petit_image{
+    height: 30px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.flex-row-inline{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
