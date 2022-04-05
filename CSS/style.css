@@ -74,4 +74,73 @@ form{
 #plage{
     width: 100%;
 }
+#destination {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding : 0 50px;
+}
+.photos_destination{
+    position: absolute;
+    height: auto;
+    margin: 20px;
+    visibility: hidden;
+  
+}
+.photos_destination img{
+    width: 200px;
+}
+#img_factice{
+    visibility: hidden;
+    position: relative;
+}
 
+/*caroussel*/
+#destination .photos_destination:nth-child(1){
+    animation : defilement 30s linear 0s infinite forwards;
+  }
+#destination .photos_destination:nth-child(2){
+    animation : defilement 30s linear 6s infinite forwards;
+  }
+#destination .photos_destination:nth-child(3){
+    animation : defilement 30s linear 12s infinite forwards;
+  }
+#destination .photos_destination:nth-child(4){
+    animation : defilement 30s linear 18s infinite forwards;
+  }
+#destination .photos_destination:nth-child(5){
+    animation : defilement 30s linear 24s infinite forwards;
+  }
+  @keyframes defilement {
+    from{
+        visibility: visible;
+        transform: translateX(50%);
+        opacity: 0%;
+    }
+
+    2%{
+        visibility: visible;
+        transform: translate(0);
+        opacity: 100%;
+    }
+
+    17%{
+        visibility: visible;
+        transform: translate(0);
+        opacity:100%;
+    }
+
+    19%{
+        visibility: visible;
+        transform: translateX(-50%);        
+        opacity: 0%;
+    }
+    20%{
+        transform: translateX(-50%);
+        visibility: hidden;
+    }
+    to{
+        transform: translateX(50%);  
+        visibility: hidden;
+    }
+    }
