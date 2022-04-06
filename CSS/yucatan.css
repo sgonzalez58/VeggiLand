@@ -13,9 +13,10 @@ body {
     align-items: center;
 }
 .logo img{
-    width: 30px;
+    width: clamp(60px,4rem,100px);
     margin-right: 15px;
 }
+
 header{
     display: flex;
     position: sticky;
@@ -25,12 +26,15 @@ header{
     background-color: white;
     align-items: center;
     z-index: 10;
-    font-size: clamp(10px,1rem,24px);
+    font-size: clamp(12px,1rem,24px);
+}
+nav label img{
+    width: clamp(20px,3rem,100px);
 }
 nav ul{
     display: none;
     position: absolute;
-    left: 0;
+    left:0;
     list-style-type: none;
     width: 100%;
     padding-inline-start:0;
@@ -66,7 +70,7 @@ nav ul li{
     width: 100%;
     text-align: center;
     border-radius: 20px;
-    padding: 10px;
+    padding: 10px 0;
     background-color: #E9FCF7;
 }
 nav ul li:nth-child(1), nav ul li:last-child{
@@ -81,15 +85,25 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: clamp(12px, 1rem, 36px);
+    text-align: center;
 }
 main h1{
     padding : 20px;
     background-color: lightgreen;
 }
 
-main > p{
-    padding : 0 10%;
-    text-align: center;
+main h2{
+    padding : 20px;
+    background-color: lightgreen;
+}
+
+main>p:first-of-type{
+    display: none;
+}
+
+#presentation{
+    padding : clamp(10px, 5%, 50px) clamp(10px, 10%, 100px);
     background-color: lightcyan;
 }
 
@@ -107,7 +121,7 @@ main div > p{
 }
 
 .petit_image{
-    height: 30px;
+    width: 30px;
 }
 
 .flex-row{
@@ -121,7 +135,6 @@ main div > p{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
 }
 
 footer {
@@ -188,4 +201,43 @@ footer {
 
 #paiements img {
    height: clamp(20px, 3rem, 100px);
+}
+
+@media screen and (min-width:1024px){
+    main{
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .image_presentation, #presentation, .detail{
+        grid-column: 1/3;
+    }
+
+    main h1{
+        place-self: end;
+    }
+
+    main>p:first-of-type{
+        display: block;
+    }
+
+    #presentation{
+        margin : 36px 10%;
+    }
+    
+    .flex-row:last-child{
+        display: block;
+    }
+    main > p:last-child{
+        grid-column: 1/2;
+        margin : 36px 10%;
+    }
+    main > p{
+        text-align: start;
+    }
+
+    .petit_image{
+        width: clamp(30px, 3rem, 150px);
+    }
 }
