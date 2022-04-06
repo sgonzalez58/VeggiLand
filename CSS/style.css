@@ -14,9 +14,10 @@ body {
     align-items: center;
 }
 .logo img{
-    width: 30px;
+    width: clamp(60px,4rem,100px);
     margin-right: 15px;
 }
+
 header{
     display: flex;
     position: sticky;
@@ -27,6 +28,9 @@ header{
     align-items: center;
     z-index: 10;
     font-size: clamp(12px,1rem,24px);
+}
+nav label img{
+    width: clamp(20px,3rem,100px);
 }
 nav ul{
     display: none;
@@ -85,16 +89,20 @@ main form{
 }
 #adresse{
     width: clamp(15px,300px,75vw);
+    background-color: rgb(247, 245, 245);
 }
 #start{
     max-width: 5vw;
 }
 #recherche{
     max-width: 15vw;
+    background-color: rgb(200, 241, 228);
+    font-size: clamp(8px,0.5rem,15px);
 }
 main h1{
     padding : 20px;
-    color: #2F5A28
+    color: #2F5A28;
+    font-size: clamp(30px,1.2rem,80px);
 }
 #plage{
     width: 100%;
@@ -107,7 +115,7 @@ main h1{
 }
 .photos_destination{
     position: absolute;
-    height: 250px;
+    height: 300px;
     margin: 20px;
     padding: 10px;
     visibility: hidden;
@@ -119,10 +127,20 @@ main h1{
    position: relative;
    height: 150px;
    margin: 10px;
+   
 }
 
 .photos_destination img{
     height: 100%;
+}
+.photos_destination figure figcaption p{
+    font-size: clamp(10px,1rem,24px);
+     
+}
+.photos_destination figure figcaption p:nth-child(3){
+    text-align: right;
+    line-height: 30px;
+    
 }
 #img_factice{
     visibility: hidden;
