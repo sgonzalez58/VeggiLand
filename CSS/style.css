@@ -299,7 +299,7 @@ main h1{
     header{
         justify-content: space-evenly;
         flex-wrap: wrap;
-        margin: 0 7%;
+        padding: 0 7%;
     }
 
     header>a, #compte_agence>a{
