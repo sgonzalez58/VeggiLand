@@ -213,6 +213,13 @@ main h1{
         visibility: hidden;
     }
     }
+    #nous_trouver{
+        display: none;
+    }
+    #carte_maps{
+        display: none;
+    }
+
     footer {
         background-color: #b6d5d9;
         padding: 20px 0;
@@ -304,8 +311,6 @@ main h1{
         display: flex;
         position: relative;
         justify-content: center;
-        padding-inline-start: 10%;
-    
     }
     nav ul li{
         width: max-content;
@@ -335,7 +340,22 @@ main h1{
         display: flex;
         flex-wrap: nowrap;
     }
-
+    .ressourcer{
+        font-size: clamp(20px,1.5rem,32px);
+        color: black; 
+    }
+    #nous_trouver{
+        display: block;
+    }
+    #carte_maps{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    #carte_maps p{
+        font-size: clamp(18px,1.5rem,25px);
+        padding: 200px 50px;
+    }
     footer{
         display: flex;
         flex-direction: column;
@@ -392,7 +412,6 @@ main h1{
          grid-column: 2/4;
          grid-row: 2/3;
      }
-
 
     }
 
