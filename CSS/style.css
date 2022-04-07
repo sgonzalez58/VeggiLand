@@ -28,6 +28,9 @@ header{
     z-index: 10;
     font-size: clamp(12px,1rem,24px);
 }
+header >a, #compte_agence>a{
+    display: none;
+}
 nav label img{
     width: clamp(20px,3rem,100px);
 }
@@ -272,6 +275,47 @@ main h1{
     }
 
     @media screen and (min-width:1024px){
+        
+    nav label img{
+        display: none;
+        }
+    nav ul {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        padding-inline-start: 10%;
+
+    }
+    nav ul li{
+        width: max-content;
+        border-radius: 0;
+        padding:clamp(10px,0.2rem,30px) clamp(20px,0.4rem,40px);
+        font-size: clamp(18px,0.35rem,42px);
+
+    }
+    nav ul li:nth-child(1), nav ul li:nth-child(2), nav ul li:last-child{
+        display: none;
+    }
+    header{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 0 7%;
+    }
+
+    header>a, #compte_agence>a{
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-size: clamp(18px,0.4rem,42px);
+    }
+    header >a img, #compte_agence>a img{
+        height: clamp(60px,1.3rem,110px);
+    }
+    #compte_agence{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
     footer{
         display: flex;
         flex-direction: column;
@@ -328,5 +372,7 @@ main h1{
          grid-column: 2/4;
          grid-row: 2/3;
      }
+
+
     }
 
