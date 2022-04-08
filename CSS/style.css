@@ -340,9 +340,23 @@ main h1{
         display: flex;
         flex-wrap: nowrap;
     }
+    #plage_principale{
+        position: relative;
+    }
+    #plage{
+        width: 100%;
+    }
     .ressourcer{
-        font-size: clamp(20px,1.5rem,32px);
-        color: black; 
+        position: absolute;
+        font-size: clamp(25px,1.5rem,30px);
+        color: black;
+        top: 15%;
+        right:5%;
+    }
+    #plage_principale form{
+        position: absolute;
+        left: 10%;;
+        bottom: 20%;
     }
     #nous_trouver{
         display: block;
