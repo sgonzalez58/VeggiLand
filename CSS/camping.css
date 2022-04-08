@@ -92,7 +92,7 @@ main{
 }
 
 #presentation{
-    background-color: #b6d5d9;
+    background-color: #E9FCF7;
 }
 
 #presentation img{
@@ -105,6 +105,10 @@ main h2{
 
 main p {
     padding: 0 10%;
+}
+
+main > p {
+    display: none;
 }
 
 #ecotourisme{
@@ -136,13 +140,13 @@ main p {
     position: relative;
 }
 
-#ecotourisme .exemple_ecotourisme:nth-child(1){
+.exemple_ecotourisme:nth-child(1){
     animation : defilement 18s linear 0s infinite forwards;
   }
-#ecotourisme .exemple_ecotourisme:nth-child(2){
+.exemple_ecotourisme:nth-child(2){
     animation : defilement 18s linear 6s infinite forwards;
   }
-#ecotourisme .exemple_ecotourisme:nth-child(3){
+.exemple_ecotourisme:nth-child(3){
     animation : defilement 18s linear 12s infinite forwards;
   }
   @keyframes defilement {
@@ -301,6 +305,68 @@ main p {
         display: flex;
         flex-wrap: nowrap;
     }
+
+    main{
+        background-color: #E9FCF7;
+        text-align: start;
+    }
+
+    #presentation{
+        position : relative;
+        padding-top : 30px;
+    }
+
+    #presentation h2{
+        position : absolute;
+        font-size: clamp(12px, 0.6rem, 42px);
+        padding : 30px 60px;
+        left : 40%;
+        background-color: rgba(100, 200, 150, 0.5);
+    }
+    #presentation p:first-of-type{
+        padding-left: 15%;
+    }
+
+    main > h2 {
+        padding : 0 10%;
+        margin-bottom : 0;
+        font-size: clamp(12px, 0.6rem, 42px);
+        }
+
+    main > p{
+        display: block;
+        position : relative;
+        left : 35%;
+        width: 50%;
+        padding : 10px 90px 40px 10px;
+        margin : 0 0 50px;
+        background-color: #B6D5D9;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #ecotourisme{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    #ecotourisme .exemple_ecotourisme{
+        animation : none;
+        visibility: visible;
+        position: static;
+        padding : 10px;
+    }
+
+    .exemple_ecotourisme img{
+        height: clamp(300px, 6rem, 500px);
+        margin : 50px 0 80px;
+    }
+
+    .exemple_ecotourisme:last-child{
+        display: none;
+    }
+    
 
     footer{
         display: flex;
