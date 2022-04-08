@@ -92,18 +92,24 @@ main{
 }
 main form{
     display: flex;
+    align-items: center;
 }
+
 #adresse{
-    width: clamp(15px,300px,75vw);
+    width: clamp(230px,60%,600px);
     background-color: rgb(243, 234, 234);
 }
 #start{
-    max-width: 5vw;
+    width:20%;
+    margin:0 5px;
 }
 #recherche{
-    max-width: 15vw;
-    background-color: rgb(200, 241, 228);
+    width:20%;
+    background-color: rgb(114, 235, 196);
     font-size: clamp(8px,0.5rem,15px);
+    margin:0 5px;
+    padding:clamp(8px,0.2rem,10px)
+    
 }
 main h1{
     margin: 50px 0 10px;
@@ -112,13 +118,10 @@ main h1{
     font-size: clamp(30px,1.2rem,80px);
     text-align: center;
 }
-.ressourcer{
-    margin: 0 0 40px;
-}
 #plage{
     width: 100%;
     border:1px solid rgb(201, 223, 233)
-}
+}    
 #destination {
     display: flex;
     justify-content: center;
@@ -127,8 +130,6 @@ main h1{
 }
 .photos_destination{
     position: absolute;
-    height: 300px;
-    width: 70vw;
     margin: 20px 20px 40px;
     padding: 10px;
     visibility: hidden;
@@ -144,7 +145,7 @@ main h1{
 }
 
 .photos_destination img{
-    height: 150px;
+    height: 200px;
     align-self: center;
 }
 
@@ -344,19 +345,23 @@ main h1{
         position: relative;
     }
     #plage{
-        width: 100%;
+        width:100%;
     }
     .ressourcer{
         position: absolute;
-        font-size: clamp(25px,1.5rem,30px);
+        font-size: clamp(12px,0.5rem,50px);
         color: black;
         top: 15%;
         right:5%;
     }
     #plage_principale form{
         position: absolute;
-        left: 10%;;
+        left: 10%;
         bottom: 20%;
+    }
+    main form > input{
+        padding:15px 30px;
+        margin:0 10px;
     }
     #nous_trouver{
         display: block;
