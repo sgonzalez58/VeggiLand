@@ -346,14 +346,18 @@ main h1{
     }
     #plage{
         width:100%;
-    }
+    }  
     .ressourcer{
         position: absolute;
         font-size: clamp(12px,0.5rem,50px);
         color: black;
         top: 15%;
         right:5%;
+        animation: ressourcer 4s linear infinite;
     }
+    @keyframes ressourcer{  
+        50% { opacity: 0; }
+      }
     #plage_principale form{
         position: absolute;
         left: 10%;
