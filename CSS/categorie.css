@@ -159,6 +159,8 @@ main>p {
 .exemple_ecotourisme {
     position: absolute;
     visibility: hidden;
+    text-decoration: none;
+    color:black;
 }
 
 .exemple_ecotourisme figure {
@@ -193,34 +195,40 @@ main>p {
         visibility: visible;
         transform: translateX(50%);
         opacity: 0%;
+        z-index : 1;
     }
 
     2% {
         visibility: visible;
         transform: translate(0);
         opacity: 100%;
+        z-index : 1;
     }
 
     30% {
         visibility: visible;
         transform: translate(0);
         opacity: 100%;
+        z-index : 1;
     }
 
     32% {
         visibility: visible;
         transform: translateX(-50%);
         opacity: 0%;
+        z-index : 1;
     }
 
     33% {
         transform: translateX(-50%);
         visibility: hidden;
+        z-index : auto;
     }
 
     to {
         transform: translateX(50%);
         visibility: hidden;
+        z-index : auto;
     }
 }
 
@@ -454,7 +462,7 @@ footer a {
     }
 
     .exemple_ecotourisme img {
-        height: clamp(300px, 6rem, 500px);
+        height: clamp(300px, 5rem, 500px);
         margin: 50px 0 80px;
     }
 
