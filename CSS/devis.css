@@ -479,12 +479,6 @@ main h2{
     position: relative;
     overflow: hidden;
 }
-footer {
-    background-color: #b6d5d9;
-    padding: 20px 0;
-    text-align: center;
-    font-size: clamp(10px,1rem,32px);
-}
 @media screen and (min-width:1024px){
     .carte_choco{ 
         margin:0 auto;
