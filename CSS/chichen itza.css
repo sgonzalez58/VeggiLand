@@ -423,103 +423,121 @@ body {
 
 /* reset de page et debut de responsive au dessus */
 
-main{
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: clamp(12px, 1rem, 36px);
+    background-color: rgb(220, 243, 250);
+    }
+.item
+{
+    background-color: rgb(220, 243, 250);
+    color: #000;
+    padding: 15px;
     text-align: center;
+    font-size: 16px;
+    
 }
 
-.image_presentation{
+section{grid-area:principal;}
+aside{grid-area:lateral;}
+
+
+.texte1{
+    text-align: left;
+}
+.fotolia{
     width: 100%;
 }
-
-main h1{
-    padding : 20px;
-    background-color: lightgreen;
+aside {
+    background-size: cover;
 }
-
-main h2{
-    padding : 20px;
-    background-color: lightgreen;
+.itza{
+    width: 100%;
 }
-
-main>p:first-of-type{
-    display: none;
+.texte2{
+    color: #000;
 }
-
-#presentation{
-    padding : clamp(10px, 5%, 50px) clamp(10px, 10%, 100px);
-    background-color: lightcyan;
+button{
+    background-color: rgb(106, 198, 36);
+    border-radius: 15px;
+    color: blue;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-left: 250px;
 }
-
-main div > p{
-    margin : 0.5rem;
-    text-align: center;
-    background-color: lightgray;
-    padding : 10px;
+button:hover{
+    transform:scale(1.1);
+    background-color: darkseagreen;
 }
-
-.detail{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-}
-
-.petit_image{
-    width: 30px;
-}
-
-.flex-row{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-.flex-row-inline{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+button a{
+    text-decoration: none;
 }
 
 @media screen and (min-width:1024px){
-
-    main{
+    .container{
         display: grid;
-        grid-template-columns:repeat(2, 1fr);
-        justify-items: center;
         align-items: center;
+        /*grid-template-columns:/*1fr 2fr 1fr repeat(3,1fr); /*repeat(3, minmax(min-content, max-content));
+        grid-template-rows: 150px 150px; exemple grid.css*/
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:"principal lateral"/*le point permet de créer une cellule vide*/
+                            ;
+        background-color: rgb(220, 243, 250);
+        /*height: 500px;
+        width: 800px;*/
+        /*grid-auto-flow: column;/*afin de quand même gérer les lignes ou colonnes non définies lors de la conception de la grille
+        grid-auto-rows: 100px;/*afin de quand même gérer les lignes ou colonnes non définies lors de la conception de la grille*/
     }
-    .image_presentation, #presentation, .detail{
-        grid-column: 1/3;
+    .item
+    {
+        background-color: rgb(220, 243, 250);
+        color: #000;
+        padding: 15px;
+        text-align: center;
+        font-size: 16px;
+        
     }
-
-    main h1{
-        place-self: end;
-    }
-
-    main>p:first-of-type{
-        display: block;
-    }
-
-    #presentation{
-        margin : 36px 10%;
+    main{
+        margin-top: 80px;
     }
     
-    .flex-row:last-child{
-        display: block;
+    section{grid-area:principal;}
+    aside{grid-area:lateral;}
+    
+    
+    .texte1{
+        text-align: left;
     }
-    main > p:last-child{
-        grid-column: 1/2;
-        margin : 36px 10%;
+    .fotolia{
+        width: 100%;
     }
-    main > p{
-        text-align: start;
+    aside {
+        background-size: cover;
     }
-
-    .petit_image{
-        width: clamp(30px, 3rem, 150px);
+    .itza{
+        width: 100%;
+    }
+    .texte2{
+        color: #000;
+    }
+   .bonne_visite{
+        font-size:clamp(30px,2.5rem,60px);
+    }
+    button{
+        background-color: rgb(106, 198, 36);
+        border-radius: 15px;
+        color: blue;
+        font-size: 18px;
+        margin-bottom: 20px;
+        margin-left: 250px;
+    }
+    button:hover{
+        transform:scale(1.1);
+        background-color: darkseagreen;
+    }
+    button a{
+        text-decoration: none;
     }
 }

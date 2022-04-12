@@ -4,42 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/mexique.css">
+    <link rel="stylesheet" href="css/chichen itza.css">
     <title>Mexique</title>
 </head>
 <body >
-    <header class="item_head">
-        <div class="logo">
+    <header>
+        <a href="index.html" class="logo">
             <img src="img/V.png" alt="logo" title="VeggiLand">
             <H1>VeggiLand</H1>
-            </div>
-            <div id="compte_agence">
+        </a>
+        <div id="compte_agence">
             <a href=""><img src="img/contacts.png" alt="compte" title="compte">Mon compte</a>
             <a href=""><img src="img/geolocalisation.jpg" alt="geolocalisation" title="geolocalisation">Agences</a>
-            </div>
-            <a href=""><img src="img/telephone.jpg" alt="telephone" title="telephone">0948141516</a>
-            <nav>
-                <label for="mobile">
-                    <img id="burger" src="img/burger_icon.svg" alt="menu_burger">
-                </label>
-                    <input type="checkbox" name="mobile" id="mobile" role="button">
-                <div id="menu_cache">
+        </div>
+        <a href=""><img src="img/telephone.jpg" alt="telephone" title="telephone">0948141516</a>
+        <div class="break"></div>
+        <nav>
+            <label for="mobile">
+                <img id="burger" src="img/burger_icon.svg" alt="menu_burger">
+            </label>
+            <input type="checkbox" name="mobile" id="mobile" role="button">
+            <div id="menu_cache">
                 <ul>
-                    <li ><a href="#" class="bouton_compte"><img src="img/contacts.png" alt="compte">Mon compte</a></li>
-                    <li><a href="#">Agence</a></li>
-                    <li><a href="#">Croisières</a></li>
-                    <li><a href="#">Séjour</a></li>
-                    <li><a href="#">Camping</a></li>
-                    <li><a href="#">Visites guidées</a></li>
-                    <li><a href="#">Location</a></li>
-                    <li><a href="#">Vol</a></li>
-                    <li><a href="#">Bons plans</a></li>
-                    <li><a href="#" class="telephone"><img src="img/telephone.jpg">0948141516</a></li>
+                    <li><a href="#" class="bouton_lien"><img src="img/contacts.png" alt="compte">Mon compte</a></li>
+                    <li><a href="#" class="bouton_lien">Agence</a></li>
+                    <li><a href="croisiere.html" class="bouton_lien">Croisières</a></li>
+                    <li><a href="sejour.html" class="bouton_lien">Séjour</a></li>
+                    <li><a href="camping.html" class="bouton_lien">Camping</a></li>
+                    <li><a href="visites_guidees.html" class="bouton_lien">Visites&nbsp;guidées</a></li>
+                    <li class="deroulant">
+                        <p>Location</p>
+                        <ul class="sous_menu">
+                            <li><a href="#" class="bouton_lien">Etats-Unis</a></li>
+                            <li><a href="#" class="bouton_lien">France</a></li>
+                            <li><a href="#" class="bouton_lien">Mexique</a></li>
+                            <li><a href="#" class="bouton_lien">Mexique</a></li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <p>Pays</p>
+                        <ul class="sous_menu">
+                            <li><a href="#" class="bouton_lien">Etats-Unis</a></li>
+                            <li><a href="#" class="bouton_lien">France</a></li>
+                            <li><a href="mexique.html" class="bouton_lien">Mexique</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="bouton_lien">Bons&nbsp;plans</a></li>
+                    <li><a href="#" class="bouton_lien bouton_telephone"><img src="img/telephone.jpg">0948141516</a>
+                    </li>
                 </ul>
             </div>
-            
-            </nav>
-        </header>
+            <div id="overlay"></div>
+        </nav>
+    </header>
         <main class="container">
     <section class="item texte1">
        <p>Chichen Itzà : La Majestueuse
@@ -68,7 +85,7 @@
     </div>
     </aside>
     </main>
-    <footer class="item">
+    <footer>
         <div class="grid">
             <form id="newsletter" action="post" for="machin.php">
             <label for="mail">Recevez votre newsletter</label>
@@ -95,6 +112,6 @@
             </div>
             <p>Copyright</p>
             </footer> 
-    
-</body>
+        </body>
+        <script src="JS/header.js"></script>
 </html>

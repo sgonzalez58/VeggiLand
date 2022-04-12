@@ -1,21 +1,10 @@
-html {
-    font-size: 5vw;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-}
-
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    width: clamp(60px, 4rem, 100px);
+    height: clamp(60px, 4rem, 100px);
     margin-right: 15px;
 }
 
@@ -153,122 +142,7 @@ nav div > ul > li:last-child {
     opacity: 0.5;
     height: 100vh;
     width: 100%;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: clamp(12px, 0.4rem, 24px);
-    overflow: hidden;
-}
-
-#presentation {
-    background-color: #E9FCF7;
-}
-
-#presentation img {
-    width: 120%;
-}
-
-main h2 {
-    color: #2F5A28;
-}
-
-main p {
-    padding: 0 10%;
-}
-
-main>p {
-    display: none;
-}
-
-#ecotourisme {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    font-size: clamp(24px, 0.8rem, 42px);
-    font-weight: bold;
-    padding-bottom: 30px;
-}
-
-.exemple_ecotourisme {
-    position: absolute;
-    visibility: hidden;
-    text-decoration: none;
-    color:black;
-}
-
-.exemple_ecotourisme figure {
-    display: flex;
-    margin: 0;
-    flex-direction: column-reverse;
-}
-
-.exemple_ecotourisme img {
-    width: 100%;
-}
-
-#img_factice {
-    visibility: hidden;
-    position: relative;
-}
-
-.exemple_ecotourisme:nth-child(1) {
-    animation: defilement 18s linear 0s infinite forwards;
-}
-
-.exemple_ecotourisme:nth-child(2) {
-    animation: defilement 18s linear 6s infinite forwards;
-}
-
-.exemple_ecotourisme:nth-child(3) {
-    animation: defilement 18s linear 12s infinite forwards;
-}
-
-@keyframes defilement {
-    from {
-        visibility: visible;
-        transform: translateX(50%);
-        opacity: 0%;
-        z-index : 1;
-    }
-
-    2% {
-        visibility: visible;
-        transform: translate(0);
-        opacity: 100%;
-        z-index : 1;
-    }
-
-    30% {
-        visibility: visible;
-        transform: translate(0);
-        opacity: 100%;
-        z-index : 1;
-    }
-
-    32% {
-        visibility: visible;
-        transform: translateX(-50%);
-        opacity: 0%;
-        z-index : 1;
-    }
-
-    33% {
-        transform: translateX(-50%);
-        visibility: hidden;
-        z-index : auto;
-    }
-
-    to {
-        transform: translateX(50%);
-        visibility: hidden;
-        z-index : auto;
-    }
-}
-
-footer {
+}footer {
     background-color: #b6d5d9;
     padding: 20px 0;
     text-align: center;
@@ -460,72 +334,7 @@ footer a {
     #compte_agence {
         display: flex;
         flex-wrap: nowrap;
-    }
-
-    main {
-        background-color: #E9FCF7;
-        text-align: start;
-    }
-
-    #presentation {
-        position: relative;
-        padding-top: 30px;
-    }
-
-    #presentation h2 {
-        position: absolute;
-        font-size: clamp(12px, 0.6rem, 42px);
-        padding: 30px 60px;
-        left: 40%;
-        background-color: rgba(100, 200, 150, 0.5);
-    }
-
-    #presentation p:first-of-type {
-        padding-left: 15%;
-    }
-
-    main>h2 {
-        padding: 0 10%;
-        margin-bottom: 0;
-        font-size: clamp(12px, 0.6rem, 42px);
-    }
-
-    main>p {
-        display: block;
-        position: relative;
-        left: 35%;
-        width: 50%;
-        padding: 10px 90px 40px 10px;
-        margin: 0 0 50px;
-        background-color: #B6D5D9;
-        text-align: center;
-        font-size: 36px;
-        font-weight: bold;
-    }
-
-    #ecotourisme {
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    #ecotourisme .exemple_ecotourisme {
-        animation: none;
-        visibility: visible;
-        position: static;
-        padding: 10px;
-    }
-
-    .exemple_ecotourisme img {
-        height: clamp(300px, 5rem, 500px);
-        margin: 50px 0 80px;
-    }
-
-    .exemple_ecotourisme:last-child {
-        display: none;
-    }
-
-
-    footer {
+    }footer {
         display: flex;
         flex-direction: column;
         font-size: clamp(12px, 0.3rem, 24px);
@@ -594,4 +403,198 @@ footer a {
     }
 
 
+}
+
+
+/*---------------------------------------------------------*/
+/*------------  header and footer au-dessus  --------------*/
+/*---------------------------------------------------------*/
+
+html {
+    font-size: 5vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* reset de page et debut de responsive au dessus */
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: clamp(12px, 0.4rem, 24px);
+    overflow: hidden;
+}
+
+#presentation {
+    background-color: #E9FCF7;
+}
+
+#presentation img {
+    width: 120%;
+}
+
+main h2 {
+    color: #2F5A28;
+}
+
+main p {
+    padding: 0 10%;
+}
+
+main>p {
+    display: none;
+}
+
+#ecotourisme {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: clamp(24px, 0.8rem, 42px);
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.exemple_ecotourisme {
+    position: absolute;
+    visibility: hidden;
+    text-decoration: none;
+    color:black;
+}
+
+.exemple_ecotourisme figure {
+    display: flex;
+    margin: 0;
+    flex-direction: column-reverse;
+}
+
+.exemple_ecotourisme img {
+    width: 100%;
+}
+
+#img_factice {
+    visibility: hidden;
+    position: relative;
+}
+
+.exemple_ecotourisme:nth-child(1) {
+    animation: defilement 18s linear 0s infinite forwards;
+}
+
+.exemple_ecotourisme:nth-child(2) {
+    animation: defilement 18s linear 6s infinite forwards;
+}
+
+.exemple_ecotourisme:nth-child(3) {
+    animation: defilement 18s linear 12s infinite forwards;
+}
+
+@keyframes defilement {
+    from {
+        visibility: visible;
+        transform: translateX(50%);
+        opacity: 0%;
+        z-index : 1;
+    }
+
+    2% {
+        visibility: visible;
+        transform: translate(0);
+        opacity: 100%;
+        z-index : 1;
+    }
+
+    30% {
+        visibility: visible;
+        transform: translate(0);
+        opacity: 100%;
+        z-index : 1;
+    }
+
+    32% {
+        visibility: visible;
+        transform: translateX(-50%);
+        opacity: 0%;
+        z-index : 1;
+    }
+
+    33% {
+        transform: translateX(-50%);
+        visibility: hidden;
+        z-index : auto;
+    }
+
+    to {
+        transform: translateX(50%);
+        visibility: hidden;
+        z-index : auto;
+    }
+
+}@media screen and (min-width:1024px) {
+
+    main {
+        background-color: #E9FCF7;
+        text-align: start;
+    }
+
+    #presentation {
+        position: relative;
+        padding-top: 30px;
+    }
+
+    #presentation h2 {
+        position: absolute;
+        font-size: clamp(12px, 0.6rem, 42px);
+        padding: 30px 60px;
+        left: 40%;
+        background-color: rgba(100, 200, 150, 0.5);
+    }
+
+    #presentation p:first-of-type {
+        padding-left: 15%;
+    }
+
+    main>h2 {
+        padding: 0 10%;
+        margin-bottom: 0;
+        font-size: clamp(12px, 0.6rem, 42px);
+    }
+
+    main>p {
+        display: block;
+        position: relative;
+        left: 35%;
+        width: 50%;
+        padding: 10px 90px 40px 10px;
+        margin: 0 0 50px;
+        background-color: #B6D5D9;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #ecotourisme {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    #ecotourisme .exemple_ecotourisme {
+        animation: none;
+        visibility: visible;
+        position: static;
+        padding: 10px;
+    }
+
+    .exemple_ecotourisme img {
+        height: clamp(300px, 5rem, 500px);
+        margin: 50px 0 80px;
+    }
+
+    .exemple_ecotourisme:last-child {
+        display: none;
+    }
 }
