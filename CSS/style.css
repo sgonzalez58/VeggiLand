@@ -377,8 +377,21 @@ main h1{
     }
     #carte_maps p{
         font-size: clamp(18px,1.5rem,25px);
+        font-weight: bolder;
         padding: 200px 50px;
     }
+    .main_clic figcaption{
+        font-size: 20px;
+        color: rgb(63, 153, 51);
+    }
+    .clignote{
+        position: relative;
+        animation: clignote 4s 2s linear infinite;
+        
+    }
+    @keyframes clignote{  
+        50% { opacity: 0; }
+      }
     footer{
         display: flex;
         flex-direction: column;

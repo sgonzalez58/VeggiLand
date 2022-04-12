@@ -126,11 +126,22 @@ main {
     font-size: clamp(12px, 0.4rem, 24px);
     overflow: hidden;
 }
+main p {
+    padding: 0 10%;
+}
+
+main>p {
+    display: none;
+}
+.img_eco_visites{
+    text-decoration: none;
+    color: black;
+}
 .clignote{
     position: relative;
     animation: clignote 4s 2s linear infinite;
-    color:blue;
-    margin-bottom: 20px;
+    color:rgb(209, 74, 74);
+    margin-bottom: 10px;
     text-align: center;
     
 }
@@ -160,25 +171,7 @@ main {
     50% { opacity: 0; }
   }
 
-#presentation {
-    background-color: #E9FCF7;
-}
 
-#presentation img {
-    width: 120%;
-}
-
-main h2 {
-    color: #2F5A28;
-}
-
-main p {
-    padding: 0 10%;
-}
-
-main>p {
-    display: none;
-}
 
 #ecotourisme {
     display: flex;
@@ -440,48 +433,25 @@ footer a {
         display: flex;
         flex-wrap: nowrap;
     }
-
-    
-
-    #presentation {
-        position: relative;
-        padding-top: 30px;
-    }
-
-    #presentation h2 {
-        position: absolute;
-        font-size: clamp(12px, 0.6rem, 42px);
-        padding: 30px 60px;
-        left: 40%;
-        background-color: rgba(100, 200, 150, 0.5);
-    }
-
-    #presentation p:first-of-type {
-        padding-left: 15%;
-    }
     main {
+        display:block;
+        position: relative;
         background-color: #E9FCF7;
         text-align: start;
         margin-top: 80px; 
     }
-    main>h2 {
-        padding: 0 10%;
-        margin-bottom: 0;
-        font-size: clamp(12px, 0.6rem, 42px);
-    }
-
-    main>p {
-        display: block;
-        position: relative;
-        left: 35%;
-        width: 50%;
-        padding: 10px 90px 40px 10px;
-        margin: 0 0 50px;
-        background-color: #B6D5D9;
-        text-align: center;
-        font-size: 36px;
+    main p {
+        justify-content: center;
+        width: 90%;
+        padding: 10px;
+        margin:0 auto;
+        background-color: #e8ece3;
+        text-align:start;
+        font-size: 20px ;
         font-weight: bold;
+        line-height: 1.5em;
     }
+    
     .quel_sejour{
         text-align: center;
     }
@@ -542,9 +512,13 @@ footer a {
     .exemple_ecotourisme:last-child {
         display: none;
     }
+    .img_eco_visites{
+        text-decoration: none;
+        color: black;
+    }
     .parc figcaption{
         text-align: center;
-        font-size: 24px;
+        font-size: 28px;
     }
     
     footer {
