@@ -432,11 +432,15 @@ main {
     font-size: clamp(12px, 0.4rem, 24px);
 }
 
-#presentation {
+main h1 {
     color:#2F5A28;
     font-weight: bold;    
     font-size: clamp(36px, 1.2rem, 72px);
-    margin-bottom: 100px;
+    margin: 60px 0;
+}
+
+#presentation{
+    display: none;
 }
 
 .categorie {
@@ -450,6 +454,7 @@ main {
 .offre {
     position: absolute;
     padding : 20px 0;
+    width: 100%;
 }
 
 .offre figure {
@@ -461,6 +466,10 @@ main {
 
 .offre figcaption{
     margin : 0 10%;
+}
+
+.offre figcaption a{
+    display: none;
 }
 
 .offre a{
@@ -481,5 +490,48 @@ main {
 }
 
 @media screen and (min-width:1024px){
-    
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+
+    main h1{
+        place-self: end;
+        background-color: #b6d5d9;
+        padding : 10px 30px;
+        font-size: clamp(18px, 0.6rem, 36px);
+        margin : 120px 0 80px;
+    }
+    #presentation{
+        grid-column: 1/3;
+        display: block;
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    #sejour{
+        grid-column-start: 2;
+        grid-row: 3/6;
+    }
+    .categorie{
+        font-size: clamp(16px, 0.3rem, 28px);
+    }
+
+    .offre figure > a{
+        display: none;
+    }
+
+    .offre figcaption{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+    }
+
+    .offre figcaption a{
+        display: block;
+        margin : 0 10px;
+    }
 }
