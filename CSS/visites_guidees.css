@@ -1,0 +1,619 @@
+html {
+    font-size: 5vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: clamp(60px, 4rem, 100px);
+    margin-right: 15px;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    justify-content: space-around;
+    top: 0;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+    z-index: 10;
+    font-size: clamp(12px, 1rem, 24px);
+}
+
+header>a,
+#compte_agence>a {
+    display: none;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.break {
+    display: none;
+    flex-basis: 100%;
+    height: 0;
+}
+
+nav label img {
+    width: clamp(20px, 3rem, 80px);
+}
+
+nav {
+    padding-left: 10%;
+}
+
+nav ul {
+    display: none;
+    position: absolute;
+    left: 1%;
+    list-style-type: none;
+    width: 98%;
+    padding-inline-start: 0;
+}
+
+nav input[type=checkbox]:checked+div>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+nav input[type=checkbox]:checked~#overlay {
+    display: block;
+}
+
+nav input {
+    display: none;
+}
+
+.bouton_lien {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.bouton_telephone {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bouton_lien img {
+    width: 30px;
+}
+
+nav ul li {
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #E9FCF7;
+}
+
+nav ul li:nth-child(1),
+nav ul li:last-child {
+    border: none;
+    background-color: white;
+}
+
+#overlay {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: clamp(12px, 0.4rem, 24px);
+    overflow: hidden;
+}
+.clignote{
+    position: relative;
+    animation: clignote 4s 2s linear infinite;
+    color:blue;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+@keyframes clignote{  
+    50% { opacity: 0; }
+  }
+.clignote2{
+    position: relative;
+    animation: clignote2 4s 4s linear infinite;
+    color:rgb(255, 123, 0);
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+@keyframes clignote2{  
+    50% { opacity: 0; }
+  }
+  .clignote3{
+    position: relative;
+    animation: clignote3 4s 6s linear infinite;
+    color:rgb(0, 102, 255);
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+@keyframes clignote3{  
+    50% { opacity: 0; }
+  }
+
+#presentation {
+    background-color: #E9FCF7;
+}
+
+#presentation img {
+    width: 120%;
+}
+
+main h2 {
+    color: #2F5A28;
+}
+
+main p {
+    padding: 0 10%;
+}
+
+main>p {
+    display: none;
+}
+
+#ecotourisme {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: clamp(24px, 0.8rem, 42px);
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.exemple_ecotourisme {
+    position: absolute;
+    visibility: hidden;
+    text-decoration: none;
+    color:black;
+}
+
+.exemple_ecotourisme figure {
+    display: flex;
+    margin: 0;
+    flex-direction: column-reverse;
+}
+
+.exemple_ecotourisme img {
+    width: 100%;
+}
+
+#img_factice {
+    visibility: hidden;
+    position: relative;
+}
+
+.exemple_ecotourisme:nth-child(1) {
+    animation: defilement 18s linear 0s infinite forwards;
+}
+
+.exemple_ecotourisme:nth-child(2) {
+    animation: defilement 18s linear 6s infinite forwards;
+}
+
+.exemple_ecotourisme:nth-child(3) {
+    animation: defilement 18s linear 12s infinite forwards;
+}
+
+@keyframes defilement {
+    from {
+        visibility: visible;
+        transform: translateX(50%);
+        opacity: 0%;
+        z-index : 1;
+    }
+
+    2% {
+        visibility: visible;
+        transform: translate(0);
+        opacity: 100%;
+        z-index : 1;
+    }
+
+    30% {
+        visibility: visible;
+        transform: translate(0);
+        opacity: 100%;
+        z-index : 1;
+    }
+
+    32% {
+        visibility: visible;
+        transform: translateX(-50%);
+        opacity: 0%;
+        z-index : 1;
+    }
+
+    33% {
+        transform: translateX(-50%);
+        visibility: hidden;
+        z-index : auto;
+    }
+
+    to {
+        transform: translateX(50%);
+        visibility: hidden;
+        z-index : auto;
+    }
+}
+
+footer {
+    background-color: #b6d5d9;
+    padding: 20px 0;
+    text-align: center;
+    font-size: clamp(10px, 1rem, 32px);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    row-gap: 0.7rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid>* {
+    margin: 0 1.2rem;
+}
+
+#newsletter {
+    grid-column: 1/5;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 25px;
+    background-color: white;
+}
+
+#newsletter label {
+    margin-bottom: 15px;
+}
+
+#newsletter>div {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#newsletter input:first-child {
+    padding: 4%;
+    width: 70%;
+}
+
+#newsletter input:last-child {
+    padding: 4%;
+}
+
+#informations_agence {
+    grid-column: 1/3;
+    grid-row: 3/6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#informations_agence p {
+    margin: 0 0 20px;
+}
+
+#informations_agence a {
+    line-height: 2.5em;
+}
+
+#offres_entreprise {
+    grid-column: 3/5;
+    grid-row: 3/4;
+}
+
+#Nos_formules {
+    grid-column: 3/5;
+    grid-row: 4/5;
+}
+
+#Infos_pratiques {
+    grid-column: 3/5;
+    grid-row: 5/6;
+}
+
+#paiements {
+    display: flex;
+    grid-column: 1/5;
+    grid-row: 6/7;
+    background-color: white;
+}
+
+#paiements img {
+    height: clamp(20px, 3rem, 100px);
+}
+
+@media screen and (min-width:1024px) {
+
+    .break {
+        display: block;
+    }
+
+    nav label {
+        display: none;
+    }
+
+    nav input[type=checkbox]:checked+#menu_cache {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    nav input[type=checkbox]:checked+#menu_cache>ul {
+        flex-direction: row;
+    }
+
+    #menu_cache {
+        transition-duration: 0.5s;
+        max-height: 300px;
+    }
+
+    nav ul {
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+
+    .bouton_lien {
+        padding: clamp(10px, 0.2rem, 30px) clamp(20px, 0.4rem, 40px);
+    }
+
+    nav ul li {
+        width: max-content;
+        border-radius: 0;
+        font-size: clamp(12px, 0.30rem, 24px);
+
+    }
+
+    nav ul li:nth-child(1),
+    nav ul li:nth-child(2),
+    nav ul li:last-child {
+        display: none;
+    }
+
+    #overlay {
+        top: 90%;
+        height: 20px;
+        opacity: 0;
+    }
+
+    #overlay:hover {
+        opacity: 0.3;
+    }
+
+    header {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    header>a,
+    #compte_agence>a {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-size: clamp(12px, 0.3rem, 24px);
+    }
+
+    header>a img,
+    #compte_agence>a img {
+        height: clamp(20px, 0.8rem, 50px);
+    }
+
+    #compte_agence {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    
+
+    #presentation {
+        position: relative;
+        padding-top: 30px;
+    }
+
+    #presentation h2 {
+        position: absolute;
+        font-size: clamp(12px, 0.6rem, 42px);
+        padding: 30px 60px;
+        left: 40%;
+        background-color: rgba(100, 200, 150, 0.5);
+    }
+
+    #presentation p:first-of-type {
+        padding-left: 15%;
+    }
+    main {
+        background-color: #E9FCF7;
+        text-align: start;
+        margin-top: 80px; 
+    }
+    main>h2 {
+        padding: 0 10%;
+        margin-bottom: 0;
+        font-size: clamp(12px, 0.6rem, 42px);
+    }
+
+    main>p {
+        display: block;
+        position: relative;
+        left: 35%;
+        width: 50%;
+        padding: 10px 90px 40px 10px;
+        margin: 0 0 50px;
+        background-color: #B6D5D9;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .quel_sejour{
+        text-align: center;
+    }
+    .sejour{
+        margin:60px 80px;
+    }
+    .clignote{
+        position: relative;
+        animation: clignote 4s 2s linear infinite;
+        color:blue;
+        margin-bottom: 20px;
+        text-align: center;
+        
+    }
+    @keyframes clignote{  
+        50% { opacity: 0; }
+      }
+    .clignote2{
+        position: relative;
+        animation: clignote2 4s 4s linear infinite;
+        color:rgb(255, 123, 0);
+        margin-bottom: 20px;
+        text-align: center;
+        
+    }
+    @keyframes clignote2{  
+        50% { opacity: 0; }
+      }
+      .clignote3{
+        position: relative;
+        animation: clignote3 4s 6s linear infinite;
+        color:rgb(0, 102, 255);
+        margin-bottom: 20px;
+        text-align: center;
+        
+    }
+    @keyframes clignote3{  
+        50% { opacity: 0; }
+      }
+    #ecotourisme {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    #ecotourisme .exemple_ecotourisme {
+        animation: none;
+        visibility: visible;
+        position: static;
+        padding: 10px;
+    }
+
+    .exemple_ecotourisme img {
+        height: clamp(300px, 5rem, 500px);
+        width: clamp(500px, 9rem, 800px);
+        margin: 50px 0 80px;
+    }
+
+    .exemple_ecotourisme:last-child {
+        display: none;
+    }
+    .parc figcaption{
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        font-size: clamp(12px, 0.3rem, 24px);
+    }
+
+    footer p:last-child {
+        margin-bottom: 0;
+    }
+
+    .grid {
+        gap: 20px;
+        align-items: center;
+        grid-template-columns: repeat(4, minmax(50px, 300px));
+        margin: 0 auto;
+    }
+
+    .grid>* {
+        margin: 0;
+    }
+
+    #newsletter {
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+
+    #newsletter label {
+        font-size: clamp(12px, 0.3rem, 24px);
+    }
+
+    #newsletter div {
+        display: flex;
+        justify-content: center;
+    }
+
+    #newsletter input[type="mail"] {
+        width: clamp(120px, 10vw, 350px);
+    }
+
+    #informations_agence {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    #informations_agence a {
+        line-height: 1.5em;
+    }
+
+    #offres_entreprise {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    #Nos_formules {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    #Infos_pratiques {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+
+    #paiements {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+
+}
