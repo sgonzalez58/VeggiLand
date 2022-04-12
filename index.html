@@ -10,35 +10,52 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-        <img src="img/V.png" alt="logo" title="VeggiLand">
-        <H1>VeggiLand</H1>
-        </div>
+        <a href="index.html" class="logo">
+            <img src="img/V.png" alt="logo" title="VeggiLand">
+            <H1>VeggiLand</H1>
+        </a>
         <div id="compte_agence">
-        <a href=""><img src="img/contacts.png" alt="compte" title="compte">Mon compte</a>
-        <a href=""><img src="img/geolocalisation.jpg" alt="geolocalisation" title="geolocalisation">Agences</a>
+            <a href=""><img src="img/contacts.png" alt="compte" title="compte">Mon compte</a>
+            <a href=""><img src="img/geolocalisation.jpg" alt="geolocalisation" title="geolocalisation">Agences</a>
         </div>
         <a href=""><img src="img/telephone.jpg" alt="telephone" title="telephone">0948141516</a>
+        <div class="break"></div>
         <nav>
             <label for="mobile">
                 <img id="burger" src="img/burger_icon.svg" alt="menu_burger">
             </label>
-                <input type="checkbox" name="mobile" id="mobile" role="button">
+            <input type="checkbox" name="mobile" id="mobile" role="button">
             <div id="menu_cache">
-            <ul>
-                <li ><a href="#" class="bouton_compte"><img src="img/contacts.png" alt="compte">Mon compte</a></li>
-                <li><a href="#">Agence</a></li>
-                <li><a href="#">Croisières</a></li>
-                <li><a href="#">Séjour</a></li>
-                <li><a href="#">Camping</a></li>
-                <li><a href="#">Visites guidées</a></li>
-                <li><a href="#">Location</a></li>
-                <li><a href="#">Vol</a></li>
-                <li><a href="#">Bons plans</a></li>
-                <li><a href="#" class="telephone"><img src="img/telephone.jpg">0948141516</a></li>
-            </ul>
-        </div>
-        
+                <ul>
+                    <li><a href="#" class="bouton_lien"><img src="img/contacts.png" alt="compte">Mon compte</a></li>
+                    <li><a href="#" class="bouton_lien">Agence</a></li>
+                    <li><a href="croisiere.html" class="bouton_lien">Croisières</a></li>
+                    <li><a href="sejour.html" class="bouton_lien">Séjour</a></li>
+                    <li><a href="camping.html" class="bouton_lien">Camping</a></li>
+                    <li><a href="visites_guidees.html" class="bouton_lien">Visites&nbsp;guidées</a></li>
+                    <li class="deroulant">
+                        <p>Location</p>
+                        <ul class="sous_menu">
+                            <li><a href="#" class="bouton_lien">Etats-Unis</a></li>
+                            <li><a href="#" class="bouton_lien">France</a></li>
+                            <li><a href="#" class="bouton_lien">Mexique</a></li>
+                            <li><a href="#" class="bouton_lien">Mexique</a></li>
+                        </ul>
+                    </li>
+                    <li class="deroulant">
+                        <p>Pays</p>
+                        <ul class="sous_menu">
+                            <li><a href="#" class="bouton_lien">Etats-Unis</a></li>
+                            <li><a href="#" class="bouton_lien">France</a></li>
+                            <li><a href="mexique.html" class="bouton_lien">Mexique</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="bouton_lien">Bons&nbsp;plans</a></li>
+                    <li><a href="#" class="bouton_lien bouton_telephone"><img src="img/telephone.jpg">0948141516</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="overlay"></div>
         </nav>
     </header>
     <main>
@@ -131,32 +148,33 @@
         </figure> 
         </div>
     </main>  
+    <footer>
+    <div class="grid">
+    <form id="newsletter" action="post" for="machin.php">
+    <label for="mail">Recevez votre newsletter</label>
+    <div>
+    <input type="mail" name="mail" id="mail" placeholder="Entrez votre mail">
+    <input type="submit" value="OK">
+    </div>
+    </form>
+    <div id="informations_agence">
+    <p>
+        Informations agence
+    </p>
+    <a href="#">Nous connaitre</a>
+    <a href="#">Nos partenaires</a>
+    <a href="#">Nos brochures</a>
+    </div>
+    <a href="#" id="offres_entreprise">Offres entreprises / CSE</a>
+    <a href="#" id="Nos_formules">Nos formules / Offres</a>
+    <a href="#" id="Infos_pratiques">Infos pratiques / Info covid</a>
+    <div id="paiements">
+    <img src="img/moyens de paiement.png" alt="moyens de paiement" title="paiements">
+    <img src="img/ancv.png"  alt="ancv" title="ancv">
+    </div>
+    </div>
+    <p>Copyright</p>
+    </footer>
 </body>
-<footer>
-<div class="grid">
-<form id="newsletter" action="post" for="machin.php">
-<label for="mail">Recevez votre newsletter</label>
-<div>
-<input type="mail" name="mail" id="mail" placeholder="Entrez votre mail">
-<input type="submit" value="OK">
-</div>
-</form>
-<div id="informations_agence">
-<p>
-    Informations agence
-</p>
-<a href="#">Nous connaitre</a>
-<a href="#">Nos partenaires</a>
-<a href="#">Nos brochures</a>
-</div>
-<a href="#" id="offres_entreprise">Offres entreprises / CSE</a>
-<a href="#" id="Nos_formules">Nos formules / Offres</a>
-<a href="#" id="Infos_pratiques">Infos pratiques / Info covid</a>
-<div id="paiements">
-<img src="img/moyens de paiement.png" alt="moyens de paiement" title="paiements">
-<img src="img/ancv.png"  alt="ancv" title="ancv">
-</div>
-</div>
-<p>Copyright</p>
-</footer>
+<script src="JS/header.js"></script>
 </html>
