@@ -283,6 +283,9 @@ footer a{
         font-size: 16px;
         
     }
+    main{
+        margin-top: 80px;
+    }
     
     section{grid-area:principal;}
     aside{grid-area:lateral;}
@@ -302,6 +305,9 @@ footer a{
     }
     .texte2{
         color: #000;
+    }
+   .bonne_visite{
+        font-size:clamp(30px,2.5rem,60px);
     }
     button{
         background-color: rgb(106, 198, 36);
