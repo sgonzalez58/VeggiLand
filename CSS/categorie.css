@@ -448,6 +448,14 @@ footer a {
         font-size: 36px;
         font-weight: bold;
     }
+    .clignote{
+        position: relative;
+        animation: clignote 4s linear infinite;
+        color:blue
+    }
+    @keyframes clignote{  
+        50% { opacity: 0; }
+      }
 
     #ecotourisme {
         flex-wrap: wrap;

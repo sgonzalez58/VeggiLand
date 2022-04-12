@@ -1,0 +1,264 @@
+body {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: clamp(60px,4rem,100px);
+    margin-right: 15px;
+}
+
+header{
+    display: flex;
+    position: sticky;
+    justify-content: space-around;
+    top:0;
+    padding:10px;
+    background-color: white;
+    align-items: center;
+    z-index: 10;
+    font-size: clamp(12px,1rem,24px);
+}
+header >a, #compte_agence>a{
+    display: none;
+}
+header a{
+    text-decoration: none;
+}
+nav label img{
+    width: clamp(20px,3rem,100px);
+}
+nav ul{
+    display: none;
+    position: absolute;
+    left:0;
+    list-style-type: none;
+    width: 100%;
+    padding-inline-start:0;
+}
+nav input[type=checkbox]:checked + div > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav input{
+display: none;
+}
+.bouton_compte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.bouton_compte img{
+    width: 30px;   
+}
+.telephone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.telephone img{
+    width: 30px;
+}
+nav ul li{
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 0;
+    background-color: #E9FCF7;
+}
+nav ul li:nth-child(1), nav ul li:last-child{
+    border: none;
+    background-color: white;
+}
+
+footer.item
+{
+    background-color: #b6d5d9;
+    color: #000;
+    padding: 20px 0;
+    text-align: center;
+    font-size: clamp(10px,1rem,32px);
+    
+}
+footer a{
+    text-decoration: none;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(50px, auto);
+    row-gap: 0.7rem;
+    justify-items: center;
+    align-items: center;
+}
+.grid >*{
+    margin:0 1.2rem;
+}
+
+#newsletter{
+    grid-column: 1/5;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 30px;
+    background-color: white;
+}
+
+#informations_agence{
+    grid-column: 1/3;
+    grid-row: 3/6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#informations_agence p{
+    margin:0 0 20px;
+}
+
+#informations_agence a{
+    line-height: 2.5em;
+}
+#offres_entreprise{
+    grid-column: 3/5;
+    grid-row: 3/4;
+}
+#Nos_formules{
+    grid-column: 3/5;
+    grid-row: 4/5; 
+}
+#Infos_pratiques{
+    grid-column: 3/5;
+    grid-row: 5/6;
+}
+#paiements{
+    display: flex;
+    grid-column: 1/5;
+    grid-row: 6/7; 
+    background-color: white;
+}
+
+#paiements img {
+   height: clamp(20px, 3rem, 100px);
+}
+
+
+@media screen and (min-width:1024px){
+    nav label{
+        display: none;
+    }
+
+    nav input[type=checkbox]:checked + #menu_cache { 
+        max-height: 0;
+        overflow: hidden;
+      }
+
+    nav input[type=checkbox]:checked + #menu_cache > ul { 
+        flex-direction: row;
+    }
+
+    #menu_cache{
+        transition-duration: 0.5s;
+        max-height: 300px;
+    }
+    
+    nav ul {
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+    nav ul li{
+        width: max-content;
+        border-radius: 0;
+        padding:clamp(10px,0.2rem,30px) clamp(20px,0.4rem,40px);
+        font-size: clamp(18px,0.35rem,42px);
+
+    }
+    nav ul li:nth-child(1), nav ul li:nth-child(2), nav ul li:last-child{
+        display: none;
+    }
+    header{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    header>a, #compte_agence>a{
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-size: clamp(18px,0.4rem,42px);
+    }
+    header >a img, #compte_agence>a img{
+        height: clamp(60px,1.3rem,110px);
+    }
+    #compte_agence{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+footer{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(18px,0.5rem,36px);
+    padding: 80px 0;
+}
+footer p:last-child{
+    margin-bottom: 0;
+}
+.grid{
+    gap:20px;
+    align-items:flex-start;
+    grid-template-columns: repeat(4,minmax(50px,300px));
+    margin: 0 auto;
+}
+.grid >*{
+    margin: 0;
+}   
+ #newsletter{
+    grid-column: 4/5;
+    grid-row: 2/3;
+ }
+ #newsletter label{
+     font-size: clamp(16px,0.3rem,36px);
+ }
+ #newsletter div{
+     display: flex;
+     justify-content: center;
+ }
+ #newsletter input[type="mail"]{
+     width: clamp(120px,10vw,350px);
+ }
+ #informations_agence{
+     grid-column: 1/2;
+     grid-row: 1/3;
+ }
+ #informations_agence a{
+     line-height: 1.5em;
+ }
+
+ #offres_entreprise{
+     grid-column: 3/4;
+     grid-row: 1/2;
+ }
+ #Nos_formules{
+     grid-column: 2/3;
+     grid-row: 1/2;
+ }
+ #Infos_pratiques{
+     grid-column: 4/5;
+     grid-row: 1/2;
+ }
+ #paiements{
+     grid-column: 2/4;
+     grid-row: 2/3;
+ }
+
+}
