@@ -506,19 +506,19 @@ main h1{
 }
 
 /*caroussel*/
-#destination .photos_destination:nth-child(1){
+.photos_destination:nth-child(1){
     animation : defilement 30s linear 0s infinite forwards;
   }
-#destination .photos_destination:nth-child(2){
+.photos_destination:nth-child(2){
     animation : defilement 30s linear 6s infinite forwards;
   }
-#destination .photos_destination:nth-child(3){
+.photos_destination:nth-child(3){
     animation : defilement 30s linear 12s infinite forwards;
   }
-#destination .photos_destination:nth-child(4){
+.photos_destination:nth-child(4){
     animation : defilement 30s linear 18s infinite forwards;
   }
-#destination .photos_destination:nth-child(5){
+.photos_destination:nth-child(5){
     animation : defilement 30s linear 24s infinite forwards;
   }
   @keyframes defilement {
@@ -563,7 +563,6 @@ main h1{
 
     
     @media screen and (min-width:1024px){
-
     #plage_principale{
         position: relative;
     }
@@ -590,13 +589,42 @@ main h1{
         padding:15px 30px;
         margin:0 10px;
     }
+
+    #offres_actuelles{
+        background-color: #b6d5d9;
+        width: 100%;
+        margin-top:-20px;
+    }
+
+    main{
+        align-items: flex-start;
+    }
+
+    main h1{
+        text-align: start;
+        margin-left: 5%;
+    }
+
+    #destination{
+        flex-wrap: wrap;
+    }
+
+    #destination .photos_destination{
+        animation:none;
+        position: static;
+        visibility: visible;
+    }
+
+    #img_factice{
+        display: none;
+    }
+
     #nous_trouver{
         display: block;
     }
     #carte_maps{
         display: flex;
-        justify-content: flex-start;
-        width: 100%;
+        margin : 50px 10%;
     }
     #carte_maps p{
         font-size: clamp(18px,1.5rem,25px);
