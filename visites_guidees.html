@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/visites_guidees.css">
+    <title>VeggiLand</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/V.png" alt="logo" title="VeggiLand">
+            <H1>VeggiLand</H1>
+        </div>
+        <div id="compte_agence">
+            <a href=""><img src="img/contacts.png" alt="compte" title="compte">Mon compte</a>
+            <a href=""><img src="img/geolocalisation.jpg" alt="geolocalisation" title="geolocalisation">Agences</a>
+        </div>
+        <a href=""><img src="img/telephone.jpg" alt="telephone" title="telephone">0948141516</a>
+        <div class="break"></div>
+        <nav>
+            <label for="mobile">
+                <img id="burger" src="img/burger_icon.svg" alt="menu_burger">
+            </label>
+            <input type="checkbox" name="mobile" id="mobile" role="button">
+            <div id="menu_cache">
+                <ul>
+                    <li><a href="#" class="bouton_lien"><img src="img/contacts.png" alt="compte">Mon compte</a></li>
+                    <li><a href="#" class="bouton_lien">Agence</a></li>
+                    <li><a href="#" class="bouton_lien">Croisières</a></li>
+                    <li><a href="#" class="bouton_lien">Séjour</a></li>
+                    <li><a href="#" class="bouton_lien">Camping</a></li>
+                    <li><a href="#" class="bouton_lien">Visites&nbsp;guidées</a></li>
+                    <li><a href="#" class="bouton_lien">Location</a></li>
+                    <li><a href="#" class="bouton_lien">Vol</a></li>
+                    <li><a href="#" class="bouton_lien">Bons&nbsp;plans</a></li>
+                    <li><a href="#" class="bouton_lien bouton_telephone"><img src="img/telephone.jpg">0948141516</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="overlay"></div>
+        </nav>
+    </header>
+
+    <main>
+    <section class="sejour">
+        <h1 class="quel_sejour">Notre vision du voyage pour un développement durable</h1>
+        <h1 class="quel_sejour">Découvrir les lieux d'intérêts</h1>
+        <h1 class="clignote">Des voyages authentiques en immersion</h1>
+            <p>Voyages sur-mesure ou des voyages en petits groupes pour mieux s’immerger au coeur de la nature</P>
+            <p>Des destinations hors des sentiers battus, à l'écart du tourisme de masse, pour découvrir les perles cachées sans manquer les incontournables</P>
+            <p>Des hébergements de charme typiques, à taille humaine, et des modes de transport traditionnels pour une immersion authentique</P>
+            <p>Des éco-safaris pour approcher la faune sauvage dans le respect de leur environnement</p>
+        <h1 class="clignote2">Des voyages éthiques qui favorisent l'économie locale et ses ressources</h1>
+            <P>Des projets locaux pour comprendre les enjeux de la biodiversité</p>
+            <P>Des écolodges intégrés à leur environnement naturel pour mieux le préserver</p>
+            <P>Des trajets réduits et des activités non polluantes favorisant au maximum la mobilité douce</p>
+            <P>Des tarifs justes et équitables pour tous et des guides locaux traités avec respect.</p>
+        <h1 class="clignote3">Agence de voyage peut-elle rimer avec Visites guidées en Ecotourisme</h1>
+            <p>Pour le touriste, un ecolodge ou une agence de voyage responsable assurent que les conditions seront réunies pour une expérience optimale :</p>
+            <p> le respect de la législation, de la culture et de l'environnement, des étapes assez longues pour rencontrer et échanger avec la population, des groupes de petite taille, des guides de qualité car rémunérés correctement...</p>
+        </section>
+    <div id="ecotourisme">
+        <article class="exemple_ecotourisme">
+            <figure class="parc">
+                <img src="img/145 (2).jpg" alt="parc national de Kenai Fjords" title="parc national de Kenai Fjords">
+                <figcaption>
+                    La faune dans les fjords de Kenai
+                </figcaption>
+            </figure>
+        </article> 
+        <article class="exemple_ecotourisme">
+            <figure class="parc">
+                <a href="yucatan.html" target="blank">
+                <img src="img/ecovolontariat850px.jpg" alt="ecovolontariat" title="ecovolontariat">
+                </a>
+            <figcaption>
+                    Eco safari au plus proche de la faune
+                </figcaption>
+            </figure class="parc">
+        </article>
+        <article class="exemple_ecotourisme">
+            <figure class="parc" >
+                <img src="img/site archéologique.jpeg" alt="site archéologique" title="site archéologique">
+                <figcaption>
+                    Sites archéologiques méconnus du Mexique
+                </figcaption>
+            </figure>
+        </article>
+        <article id="img_factice" class="exemple_ecotourisme">
+            <figure class="parc">
+                <img src="img/ecovolontariat850px.jpg" alt="ecovolontariat" title="ecovolontariat">
+                <figcaption>
+                    Le Factice
+                </figcaption>
+            </figure>
+        </article>
+    </div>
+    </main>
+<footer>
+    <div class="grid">
+        <form id="newsletter" action="post" for="machin.php">
+            <label for="mail">Recevez votre newsletter</label>
+            <div>
+                <input type="mail" name="mail" id="mail" placeholder="Entrez votre mail" required>
+                <input type="submit" value="OK">
+            </div>
+        </form>
+        <div id="informations_agence">
+            <p>
+                Informations agence
+            </p>
+            <a href="#">Nous connaitre</a>
+            <a href="#">Nos partenaires</a>
+            <a href="#">Nos brochures</a>
+        </div>
+        <a href="#" id="offres_entreprise">Offres entreprises / CSE</a>
+        <a href="#" id="Nos_formules">Nos formules / Offres</a>
+        <a href="#" id="Infos_pratiques">Infos pratiques / Info covid</a>
+        <div id="paiements">
+            <img src="img/moyens de paiement.png" alt="moyens de paiement" title="paiements">
+            <img src="img/ancv.png" alt="ancv" title="ancv">
+        </div>
+    </div>
+    <p>Copyright</p>
+</footer>
+</body>
+<script src="JS/header.js"></script>
+</html>
