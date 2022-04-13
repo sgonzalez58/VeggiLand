@@ -427,8 +427,8 @@ body {
 
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
     margin:20px;
    
     /*grid-auto-flow: column;/*afin de quand même gérer les lignes ou colonnes non définies lors de la conception de la grille
@@ -466,7 +466,7 @@ main h2{
     text-align: center;
 }
 .carte_choco{
-    width: 95vw; 
+    width: 70vw; 
     margin:0 auto;
 }
 .carte_choco img{
@@ -501,14 +501,7 @@ main h2{
         /*grid-auto-flow: column;/*afin de quand même gérer les lignes ou colonnes non définies lors de la conception de la grille
         grid-auto-rows: 100px;/*afin de quand même gérer les lignes ou colonnes non définies lors de la conception de la grille*/
     }
-    .container1{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);/*1fr 2fr 1fr repeat(4,1fr); /*repeat(3, minmax(min-content, max-content));*/
-        gap: 20px;
-        margin:20px;
-        
-    }
-    .activites{
+        .activites{
         grid-column:1/5;
     }
     .item
