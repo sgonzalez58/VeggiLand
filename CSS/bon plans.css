@@ -1,0 +1,531 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: clamp(60px, 4rem, 100px);
+    margin-right: 15px;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    justify-content: space-around;
+    top: 0;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+    z-index: 10;
+    font-size: clamp(12px, 1rem, 24px);
+}
+
+header>a,
+#compte_agence>a {
+    display: none;
+}
+
+header a {
+    text-decoration: none;
+    color:black;
+}
+
+.break {
+    display: none;
+    flex-basis: 100%;
+    height: 0;
+}
+
+nav label img {
+    width: clamp(20px, 3rem, 80px);
+}
+
+nav {
+    padding-left: 10%;
+}
+
+nav div > ul {
+    display: none;
+    position: absolute;
+    left: 1%;
+    list-style-type: none;
+    width: 48%;
+    padding-inline-start: 0;
+}
+
+nav input[type=checkbox]:checked+div>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+nav input[type=checkbox]:checked~#overlay {
+    display: block;
+}
+
+nav input {
+    display: none;
+}
+
+.bouton_lien, .deroulant p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+.bouton_telephone {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bouton_lien img {
+    width: 30px;
+}
+
+nav ul li {
+    border: 1px solid black;
+    width: 99%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #E9FCF7;
+    display: flex;
+    justify-content: center;
+}
+
+.deroulant{    
+    position : relative;
+}
+
+.deroulant p{
+    margin : 0;
+    flex-direction: row;
+}
+
+.deroulant p:after{
+    content:" ▼";
+}
+
+.sous_menu{
+    display: none;
+    position :absolute;
+    list-style-type: none;
+    padding-inline-start: 0;
+    left:101%;
+    width:105%;
+    top:0;
+    overflow :scroll;
+    height:315%;
+}
+
+.deroulant:hover .sous_menu{
+    display: flex;
+    flex-direction: column;
+}
+
+nav div > ul > li:nth-child(1),
+nav div > ul > li:last-child {
+    border: none;
+    background-color: white;
+}
+
+#overlay {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    height: 100vh;
+    width: 100%;
+}footer {
+    background-color: #b6d5d9;
+    padding: 20px 0;
+    text-align: center;
+    font-size: clamp(10px, 1rem, 32px);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    row-gap: 0.7rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid>* {
+    margin: 0 1.2rem;
+}
+
+#newsletter {
+    grid-column: 1/5;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 25px;
+    background-color: white;
+}
+
+#newsletter label {
+    margin-bottom: 15px;
+}
+
+#newsletter>div {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#newsletter input:first-child {
+    padding: 4%;
+    width: 70%;
+}
+
+#newsletter input:last-child {
+    padding: 4%;
+}
+
+#informations_agence {
+    grid-column: 1/3;
+    grid-row: 3/6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#informations_agence p {
+    margin: 0 0 20px;
+}
+
+#informations_agence a {
+    line-height: 2.5em;
+}
+
+#offres_entreprise {
+    grid-column: 3/5;
+    grid-row: 3/4;
+}
+
+#Nos_formules {
+    grid-column: 3/5;
+    grid-row: 4/5;
+}
+
+#Infos_pratiques {
+    grid-column: 3/5;
+    grid-row: 5/6;
+}
+
+#paiements {
+    display: flex;
+    grid-column: 1/5;
+    grid-row: 6/7;
+    background-color: white;
+}
+
+#paiements img {
+    height: clamp(20px, 3rem, 100px);
+}
+
+@media screen and (min-width:1024px) {
+
+    .break {
+        display: block;
+    }
+
+    nav label {
+        display: none;
+    }
+
+    nav input[type=checkbox]:checked+#menu_cache {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    nav input[type=checkbox]:checked+#menu_cache>ul {
+        flex-direction: row;
+    }
+
+    #menu_cache {
+        transition-duration: 0.3s;
+        max-height: 300px;
+    }
+
+    nav div > ul {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        width: 100%;
+        left: 0%;
+    }
+
+    .bouton_lien, .deroulant p{
+        padding: clamp(10px, 0.2rem, 30px) clamp(20px, 0.4rem, 40px);
+    }
+
+    nav ul li{
+        width: 200%;
+        border-radius: 0;
+        font-size: clamp(12px, 0.30rem, 24px);
+    }
+
+    nav div > ul > li:nth-child(1),
+    nav div > ul > li:nth-child(2),
+    nav div > ul > li:last-child {
+        display: none;
+    }
+
+.deroulant{    
+    position : relative;
+}
+
+.sous_menu{
+    left:0;
+    width: auto;
+    height: auto;
+    top:100%;
+    overflow: visible;
+}
+
+.deroulant:hover .sous_menu{
+    display: flex;
+    flex-direction: column;
+}
+
+    #overlay {
+        top: 90%;
+        height: 20px;
+        opacity: 0;
+    }
+
+    #overlay:hover {
+        opacity: 0.3;
+    }
+
+    header {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    header>a,
+    #compte_agence>a {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-size: clamp(12px, 0.3rem, 24px);
+    }
+
+    header>a img,
+    #compte_agence>a img {
+        height: clamp(20px, 0.8rem, 50px);
+    }
+
+    #compte_agence {
+        display: flex;
+        flex-wrap: nowrap;
+    }footer {
+        display: flex;
+        flex-direction: column;
+        font-size: clamp(12px, 0.3rem, 24px);
+    }
+
+    footer p:last-child {
+        margin-bottom: 0;
+    }
+
+    .grid {
+        gap: 20px;
+        align-items: center;
+        grid-template-columns: repeat(4, minmax(50px, 300px));
+        margin: 0 auto;
+    }
+
+    .grid>* {
+        margin: 0;
+    }
+
+    #newsletter {
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+
+    #newsletter label {
+        font-size: clamp(12px, 0.3rem, 24px);
+    }
+
+    #newsletter div {
+        display: flex;
+        justify-content: center;
+    }
+
+    #newsletter input[type="mail"] {
+        width: clamp(120px, 10vw, 350px);
+    }
+
+    #informations_agence {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    #informations_agence a {
+        line-height: 1.5em;
+    }
+
+    #offres_entreprise {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    #Nos_formules {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    #Infos_pratiques {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+
+    #paiements {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+
+}
+
+
+/*---------------------------------------------------------*/
+/*------------  header and footer au-dessus  --------------*/
+/*---------------------------------------------------------*/
+
+html {
+    font-size: 5vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* reset de page et debut de responsive au dessus */
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: clamp(12px, 0.4rem, 24px);
+}
+
+main h1 {
+    color:#2F5A28;
+    background-color: #b6d5d9;
+    width: 100%;
+    padding : 30px 0;
+    font-weight: bold;    
+    font-size: clamp(36px, 1.2rem, 72px);
+    margin: 60px 0;
+}
+
+section{
+    font-size: clamp(24px, 0.8rem, 42px);
+}
+
+.categorie {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.offre {
+    position: absolute;
+    padding : 20px 0;
+    box-sizing: border-box;
+}
+
+.offre figure {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    flex-direction: column-reverse;
+}
+
+.offre figcaption{
+    margin : 0 10%;
+}
+
+.offre figcaption a{
+    display: none;
+}
+
+.offre a{
+    text-decoration: none;
+    color: black;
+    padding : 10px 30px;
+    background-color: gray;
+}
+
+.offre img {
+    width: 80%;
+    margin : 20px 0;
+}
+
+.img_factice {
+    position: relative;
+    visibility: hidden;
+}
+
+.separation{
+    width : 80%;
+    height:2px;
+    background-color:#2F5A28;
+}
+
+@media screen and (min-width:1024px){
+
+    main h1{
+        padding : 10px 30px;
+        width: auto;
+        font-size: clamp(18px, 0.6rem, 36px);
+        margin : 120px 0 80px;
+    }
+
+    h2{        
+        font-size: clamp(18px, 0.6rem, 36px);
+    }
+
+    .categorie{
+        font-size: clamp(16px, 0.3rem, 28px);
+    }
+
+    .categorie a{
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    
+    .offre img{
+        height: 200px;
+    }
+
+    .categorie figure{
+        flex-direction: column;
+    }
+}
