@@ -120,6 +120,7 @@ nav ul li {
     top:0;
     overflow :scroll;
     height:315%;
+    z-index:10;
 }
 
 .deroulant:hover .sous_menu{
@@ -139,7 +140,7 @@ nav div > ul > li:last-child {
     top: 100%;
     left: 0;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.3;
     height: 100vh;
     width: 100%;
 }footer {
@@ -444,6 +445,7 @@ main h1 {
 
 section{
     font-size: clamp(24px, 0.8rem, 42px);
+    width: 100%;
 }
 
 .categorie {
@@ -451,12 +453,20 @@ section{
     justify-content: center;
     position: relative;
     padding-bottom: 40px;
+    overflow: hidden;
 }
 
 .offre {
     position: absolute;
+    visibility: hidden;
     padding : 20px 0;
     box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+.offre:first-child{
+    visibility: visible;
 }
 
 .offre figure {
@@ -497,7 +507,58 @@ section{
     background-color:#2F5A28;
 }
 
+#croisiere .offre:nth-child(1){
+    animation : defilement 24s linear 0s infinite forwards;
+  }
+#croisiere .offre:nth-child(2){
+    animation : defilement 24s linear 6s infinite forwards;
+  }
+#croisiere .offre:nth-child(3){
+    animation : defilement 24s linear 12s infinite forwards;
+  }
+#croisiere .offre:nth-child(4){
+    animation : defilement 24s linear 18s infinite forwards;
+  }
+
+@keyframes defilement {
+    from{
+        visibility: visible;
+        transform: translateX(50%);
+        opacity: 0%;
+    }
+
+    2%{
+        visibility: visible;
+        transform: translate(0);
+        opacity: 100%;
+    }
+
+    22%{
+        visibility: visible;
+        transform: translate(0);
+        opacity:100%;
+    }
+
+    24%{
+        visibility: visible;
+        transform: translateX(-50%);        
+        opacity: 0%;
+    }
+    25%{
+        transform: translateX(-50%);
+        visibility: hidden;
+    }
+    to{
+        transform: translateX(50%);  
+        visibility: hidden;
+    }
+    }
+
 @media screen and (min-width:1024px){
+
+    main{
+        text-align: start;
+    }
 
     main h1{
         padding : 10px 30px;
@@ -508,10 +569,12 @@ section{
 
     h2{        
         font-size: clamp(18px, 0.6rem, 36px);
+        margin : 30px 10%;
     }
 
     .categorie{
         font-size: clamp(16px, 0.3rem, 28px);
+        flex-wrap: wrap;
     }
 
     .categorie a{
@@ -519,8 +582,22 @@ section{
         color: black;
         border: 1px solid black;
         border-radius: 20px;
+        margin : 20px;
     }
     
+    #croisiere .categorie .offre{
+        animation:none;
+    }
+
+    .offre{
+        visibility: visible;
+        position: static;
+    }
+
+    .img_factice{
+        display: none;
+    }
+
     .offre img{
         height: 200px;
     }

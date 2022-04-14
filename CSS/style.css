@@ -120,6 +120,7 @@ nav ul li {
     top:0;
     overflow :scroll;
     height:315%;
+    z-index:10;
 }
 
 .deroulant:hover .sous_menu{
@@ -139,7 +140,7 @@ nav div > ul > li:last-child {
     top: 100%;
     left: 0;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.3;
     height: 100vh;
     width: 100%;
 }footer {
@@ -476,28 +477,43 @@ main h1{
     border: 1px solid black;
     border-radius: 15px;
     box-shadow: -5px 15px 15px 5px rgba(77, 172, 216, 0.2);
-    
 }
 .photos_destination figure{
    display:flex;
    flex-direction: column;
    margin: 10px;
+   align-items: center;
+   margin-block-start: 0;
+}
+
+.photos_destination div{
+    overflow: hidden;
+    width: clamp(200px,80vw,300px);
 }
 
 .photos_destination img{
     height: 200px;
-    align-self: center;
+}
+
+.photos_destination figure figcaption{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .photos_destination figure figcaption p{
     font-size: clamp(10px,1rem,24px);
-     
+    margin : 0;
+    margin-top: 27px;     
 }
-.photos_destination figure figcaption p:nth-child(3){
-    text-align: right;
-    line-height: 30px;  
+.photos_destination figure figcaption a{
+    font-size: clamp(10px,1rem,24px);
+    align-self:flex-end;
+    margin-top:30px;
+    text-decoration: none;
+    color: black;
 }
-.photos_destination figure figcaption p:nth-child(3):hover{
+.photos_destination figure figcaption a:hover{
     color: green;
 }
 #img_factice{
@@ -565,6 +581,7 @@ main h1{
     @media screen and (min-width:1024px){
     #plage_principale{
         position: relative;
+        width: 100%;
     }
     #plage{
         width:100%;
@@ -625,6 +642,8 @@ main h1{
     #carte_maps{
         display: flex;
         margin : 50px 10%;
+        width: 80%;
+        justify-content: center;
     }
     #carte_maps p{
         font-size: clamp(18px,1.5rem,25px);
