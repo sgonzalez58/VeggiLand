@@ -49,21 +49,64 @@
         </nav>
     </header>
     <main>
-        <form action="post" method="php.machin"></form>
-        <div class="champ">
-        <label for="Nom">Nom</label>
-        <input type="text" id="Nom" name="Nom" required></div>
-        <div class="champ">
-        <label for="Prenom">Prénom</label>
-        <input type="text" id="Prenom" name="Prenom" required></div>
-        <div class="champ">
-            <label for="mail">Prénom</label>
-            <input type="text" id="mail" name="mail" required></div>
+        <fieldset>
+            <legend>Eléments vous concernant</legend>
+        <form action="post" method="php.machin">
+            <div class="champ">
+                <label for="Nom">Nom</label>
+                <input type="text" class="form_focus" id="Nom" name="Nom" required></div>
             <div class="champ">
                 <label for="Prenom">Prénom</label>
-                <input type="text" id="Prenom" name="Prenom" required></div>
-
-    <form action="post"></form>
+                <input type="text" class="form_focus" id="Prenom" name="Prenom" required></div>
+            <div class="champ">
+                <label for="mail">Votre email</label>
+                <input type="text" class="form_focus" id="mail" name="mail" required></div>
+            <div class="champ">
+                <label for="telephone">Téléphone</label> 
+                <input type="text" class="form_focus" id="telephone" name="telephone" required></div>
+            <div>    
+                <label for="paiement">Mode de paiement</label> 
+                <input type="string" name="paiement" class="form_focus" id="paiement" size="30" required placeholder =" virement, CB, Paypal, chèque" /></div>
+        </fieldset>
+        <fieldset>
+            <label for="nbre_jours">Faites votre choix</label>
+            <select name="nombre" id="nbre_jours">
+                <option value="">Choisissez une option</option>
+            <optgroup label="nbre jours">
+                <option  value="1 jour">1 jour</option>
+                <option  value="2 jours">2 jours</option>
+                <option  value="3 jours">3 jours</option>
+                <option  value="4 jours">4 jours</option>
+                <option  value="5 jours">5 jours</option>
+                <option  value="6 jours">6 jours</option>
+            </optgroup>
+            <optgroup label="nbre semaine(s)">
+                <option  value="1 semaine">1 semaine</option>
+                <option  value="2 semaines">2 semaines</option>
+                <option  value="3 semaines">3 semaine</option>
+            </optgroup>
+                <option value="1 mois">1 mois</option>
+                <optgroup label="TOUJOURS">
+                <option  value="en retraite">EN RETRAITE</option>
+                <option  value="testeur">Testeur de vacances</option>
+            </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Votre période</legend>
+            <label for="date">Renseignez vos dates :</label><br>
+            <label for="depart">Date départ période 2022: </label>
+            <input type="date" class="form_focus" id="depart" name="depart" /> <br />
+            <label for="arrivee">Date d’arrivée période 2022: </label>
+            <input type="date" class="form_focus" id="arrivee" name="arrivee" /> <br />
+            <div class="champ" >
+                <input class="form_btn" type="submit" value="Commander"/>
+                <input class="form_btn" type="reset" value="Effacer"/> 
+            </div>
+            </fieldset>
+            
+        </form>
+        
     
     <div class="container">
         <h1 class="activites">Combien de jours de rêve</h1>

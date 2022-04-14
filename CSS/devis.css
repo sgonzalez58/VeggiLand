@@ -465,6 +465,23 @@ main h1{
 main h2{
     text-align: center;
 }
+
+input:hover{
+    font-weight: 600;
+    color: green;
+}
+.form_focus:focus{
+    color: blue;
+}
+#Nom, #Prenom, #mail, #telephone, #paiement{
+    background-color: rgb(239, 240, 208);
+}
+.form_btn{
+    border:3px black;
+    border-style: groove;
+    border-radius: 5px;
+    color: black;
+}
 .carte_choco{
     width: 70vw; 
     margin:0 auto;
