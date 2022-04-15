@@ -465,6 +465,7 @@ main h1{
 }    
 #destination {
     display: flex;
+    position : relative;
     flex-direction: column;
     justify-content: center;
     position: relative;
@@ -473,13 +474,15 @@ main h1{
 }
 .photos_destination{
     position: absolute;
-    margin: 20px 20px 40px;
+    top:0;
+    margin: 10px 20px;
     padding: 10px;
     visibility: hidden;
     border: 1px solid black;
     border-radius: 15px;
     box-shadow: -5px 15px 15px 5px rgba(77, 172, 216, 0.2);
     animation-duration: 6s;
+    animation-iteration-count: infinite;
 }
 .photos_destination figure{
    display:flex;
@@ -527,6 +530,12 @@ main h1{
 
   @keyframes defilement {
     from{
+        visibility: hidden;
+        transform: translateX(50%);
+        opacity: 0%;
+    }
+
+    1%{
         visibility: visible;
         transform: translateX(50%);
         opacity: 0%;
@@ -609,6 +618,7 @@ main h1{
 
     #destination{
         flex-wrap: wrap;
+        flex-direction: row;
     }
 
     #destination .photos_destination{
