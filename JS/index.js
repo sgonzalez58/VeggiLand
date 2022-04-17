@@ -20,15 +20,14 @@ function creation_bouton_defilement(carrousel) {
             new_button.style.backgroundColor = "lightgrey";
             new_button.style.margin = "5px";
             new_button.onclick = function () {
-                let liste_bouton;
-                let bouton;
+                let liste_bouton = carrousel[i].parentNode.getElementsByClassName("bouton");
                 for (let j = 0; j < carrousel.length; j++) {
-                    carrousel[j].style.animationDuration = "0.1s";
-                    liste_bouton = carrousel[j].parentNode.getElementsByClassName("bouton");
-                    bouton = liste_bouton[j];
-                    bouton.style.backgroundColor = "lightgrey";
-                }                        
-                defilement_recursive(carrousel, i);
+                    liste_bouton[j].style.backgroundColor = "lightgrey";
+                    carrousel[j].style.animationName = null;
+                }  
+                carrousel[i].style.animationName = "defilement";              
+                carrousel[i].style.animationPlayState = "running";
+                this.style.backgroundColor = "green";
             };
             new_flex.insertAdjacentElement("afterbegin", new_button);
         }
@@ -41,43 +40,28 @@ async function defilement_appel(carrousel) {
         console.log("001");
         let liste_bouton = carrousel[0].parentNode.getElementsByClassName("bouton");
         let bouton;
-        for (let j = 0; j < carrousel.length; j++) {
-            bouton = liste_bouton[j];
+        let longueur_carrousel = carrousel.length;
+        for (let j = 0; j < longueur_carrousel; j++) {
+            carrousel[j].style.animationPlayState = "paused";
+            carrousel[j].style.animationName = "defilement";
             carrousel[j].addEventListener('animationiteration', function () {
                 carrousel[j].style.animationPlayState = "paused";
-                bouton.style.backgroundColor = "lightgrey";
+                liste_bouton[j].style.backgroundColor = "lightgrey";
+                if (j == longueur_carrousel - 1)
+                {
+                    carrousel[0].style.animationName = "defilement";
+                    carrousel[0].style.animationPlayState = "running";
+                    liste_bouton[0].style.backgroundColor = "green";
+                } else {
+                    carrousel[j+1].style.animationName = "defilement";
+                    carrousel[j+1].style.animationPlayState = "running";
+                    liste_bouton[j+1].style.backgroundColor = "green";
+                }
             });
         }
-        while (true){
-            await defilement_recursive(carrousel,0);
-        }
+        carrousel[0].style.animationPlayState = "running";
+        liste_bouton[0].style.backgroundColor = "green";
     }
-}
-
-async function defilement_recursive(carrousel, i) {
-    let attente;
-    for (j = 0; j < carrousel.length; j++) {    
-        carrousel[j].style.animationName = null;
-    }   
-    while (i < carrousel.length) {
-        console.log("001 : " + i);
-        let duration = carrousel[i].style.animationDuration;
-        let liste_bouton = carrousel[i].parentNode.getElementsByClassName("bouton");
-        let bouton = liste_bouton[i];
-        bouton.style.backgroundColor = "green";
-        carrousel[i].style.animationDuration = "6s";
-        carrousel[i].style.animationPlayState = "running";
-        carrousel[i].style.animationName = "defilement";
-        attente = new Promise((successCallback, failureCallback) => {
-            carrousel[i].addEventListener('animationiteration', function () {
-                successCallback();
-                i++;
-                bouton.style.backgroundColor = "lightgrey";
-            });
-        });
-        await attente;
-    }
-    return (i == carrousel.length);
 }
 
 creation_bouton_defilement(liste_defilement);
