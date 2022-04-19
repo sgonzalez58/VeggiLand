@@ -120,7 +120,6 @@ nav ul li {
     top:0;
     overflow :scroll;
     height:315%;
-    z-index:10;
 }
 
 .deroulant:hover .sous_menu{
@@ -140,7 +139,7 @@ nav div > ul > li:last-child {
     top: 100%;
     left: 0;
     background-color: black;
-    opacity: 0.3;
+    opacity: 0.5;
     height: 100vh;
     width: 100%;
 }footer {
@@ -424,149 +423,145 @@ body {
 /* reset de page et debut de responsive au dessus */
 
 
-main{
+
+.container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: clamp(12px, 1rem, 36px);
-    text-align: center;
+    justify-content: center;
+    margin:20px;
+   
+    /*grid-auto-flow: column;/*afin de quand même gérer les lignes ou colonnes non définies lors de la conception de la grille
+    grid-auto-rows: 100px;/*afin de quand même gérer les lignes ou colonnes non définies lors de la conception de la grille*/
+}
+.activites{
+    flex-basis: 100%;
+}
+.item
+{
+    border: 1px yellow solid;
+    background-color: rgb(27, 113, 64);
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 15px;
+    transition: transform all 1s ease;
+    margin:10px 0;
+}
+.item:hover{
+    transform: scale(1.05);
+    background-color: rgb(79, 133, 92);
 }
 
-.image_presentation{
-    width: 100%;
+main{
+    font-size: clamp(12px, 0.4rem, 24px);
+    background-color: rgb(174, 247, 247);
 }
-
 main h1{
-    padding : 20px;
-    background-color: lightgreen;
+    text-align: center;
+    background-color: white
 }
 
 main h2{
-    padding : 20px;
-    background-color: lightgreen;
-}
-
-main>p:first-of-type{
-    display: none;
-}
-
-#presentation{
-    padding : clamp(10px, 5%, 50px) clamp(10px, 10%, 100px);
-    background-color: lightcyan;
-}
-
-.detail div > p{
-    margin : 0.5rem;
     text-align: center;
-    background-color: lightgray;
-    padding : 10px;
 }
 
-.detail{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
+input:hover{
+    font-weight: 600;
+    color: green;
 }
-
-.petit_image{
-    width: 30px;
-}
-
-.flex-row{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-.flex-row-inline{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-#info_complementaire{
-    display : grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 40px;
-    text-align: start;
-}
-
-#info_complementaire p{
-    margin : 0;
-}
-
-main aside{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-aside button{
-    background-color: rgb(106, 198, 36);
-    border-radius: 15px;
+.form_focus:focus{
     color: blue;
-    font-size: 18px;
-    padding : 10px 30px;
-}
-aside button:hover{
-    transform:scale(1.1);
-    background-color: darkseagreen;
-}
-aside button a{
-    text-decoration: none;
 }
 
+#choix_multiple{
+    display: flex;
+    flex-direction: column;
+}
+
+#choix_multiple select{
+    overflow: scroll;
+    width : clamp(10px, 300px, 100%);
+}
+
+#Nom, #Prenom, #mail, #telephone, #paiement{
+    background-color: rgb(239, 240, 208);
+}
+.form_btn{
+    border:3px black;
+    border-style: groove;
+    border-radius: 5px;
+    color: black;
+}
+.carte_choco{
+    margin:0 15%;
+}
+.carte_choco img{
+    width: 100%;
+    position: relative;
+}
+.carte_choco div{
+    overflow: hidden;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.item1{
+    margin : 100px 0 ;
+}
 @media screen and (min-width:1024px){
+    .carte_choco{ 
+        display: flex;
+    }
 
-    main{
+    .carte_choco div{
+        margin : 0 30px;
+    }
+
+    .carte_choco img:hover{
+        transform: scale(2);
+        width: auto;
+        height: 50vh;
+        position : fixed;
+        top : 20%;
+        left : 25%;
+        z-index: 100;
+    }
+
+    .container{
         display: grid;
-        grid-template-columns:repeat(2, 1fr);
-        justify-items: center;
-        align-items: center;
-        font-size: clamp(12px, 0.4rem, 24px);
-        margin-top:120px;
+        grid-template-columns:/*1fr 2fr 1fr*/ repeat(4,1fr); /*repeat(3, minmax(min-content, max-content));*/
+        gap: 20px; 
+        margin:20px;
+       
+        /*grid-auto-flow: column;/*afin de quand même gérer les lignes ou colonnes non définies lors de la conception de la grille
+        grid-auto-rows: 100px;/*afin de quand même gérer les lignes ou colonnes non définies lors de la conception de la grille*/
     }
-    .image_presentation, #presentation, .detail{
-        grid-column: 1/3;
+        .activites{
+        grid-column:1/5;
     }
-
-    main h1{
-        place-self: end;
-        font-size: clamp(24px, 0.5rem, 42px);
+    .item
+    {
+        border: 1px yellow solid;
+        background-color: rgb(27, 113, 64);
+        color: aliceblue;
+        font-size: 20px;
+        font-weight: bolder;
+        padding: 15px;
+        transition: transform all 1s ease;
     }
-
-    main>p:first-of-type{
-        display: block;
+    .item:hover{
+        transform: scale(1.05);
+        background-color: rgb(79, 133, 92);
     }
-
-    #presentation{
-        margin : 36px 10%;
+    h1{
+        text-align: center;
+        background-color: white
     }
     
-    .flex-row:last-child{
-        display: block;
-    }
-    main > p:last-child{
-        grid-column: 1/2;
-        margin : 36px 10%;
-    }
-    main p{
-        text-align: start;
-    }
-
-    .petit_image{
-        width: clamp(30px, 3rem, 150px);
-    }
-
-    main aside{
-        grid-column-start: 2;
-        grid-row: 5/7;
-    }
-    #info_complementaire{
-        grid-template-rows:repeat(8, 1fr);
-        grid-template-columns: auto;
-        grid-auto-flow: column;
+    h2{
+        text-align: center;
     }
 }

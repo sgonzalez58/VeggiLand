@@ -281,7 +281,6 @@ footer a {
     }
 
     nav div > ul > li:nth-child(1),
-    nav div > ul > li:nth-child(2),
     nav div > ul > li:last-child {
         display: none;
     }
@@ -473,6 +472,17 @@ input:hover{
 .form_focus:focus{
     color: blue;
 }
+
+#choix_multiple{
+    display: flex;
+    flex-direction: column;
+}
+
+#choix_multiple select{
+    overflow: scroll;
+    width : clamp(10px, 300px, 100%);
+}
+
 #Nom, #Prenom, #mail, #telephone, #paiement{
     background-color: rgb(239, 240, 208);
 }
@@ -483,32 +493,43 @@ input:hover{
     color: black;
 }
 .carte_choco{
-    width: 70vw; 
-    margin:0 auto;
+    margin:0 15%;
 }
 .carte_choco img{
-    width:150%;
+    height:220%;
     position: relative;
-    left:-40%;
 }
 .carte_choco div{
+    height: 300px;
+    overflow: hidden;
+    justify-content:center;
+    align-items: center;
     display: flex;
     position: relative;
     overflow: hidden;
 }
+
+.item1{
+    margin : 100px 0 ;
+}
 @media screen and (min-width:1024px){
     .carte_choco{ 
-        margin:0 auto;
+        display: flex;
     }
-    .carte_choco img{
-        width:100%;
-        left: 0;
-        transition: transform all 1s ease;
+
+    .carte_choco div{
+        margin : 0 30px;
     }
+
     .carte_choco img:hover{
-        transform: scale(1.2);
-        left: -10%;
+        transform: scale(2.2);
+        height: 50vh;
+        position : fixed;
+        top : 30%;
+        left : 25%;
+        z-index: 100;
     }
+
     .container{
         display: grid;
         grid-template-columns:/*1fr 2fr 1fr*/ repeat(4,1fr); /*repeat(3, minmax(min-content, max-content));*/

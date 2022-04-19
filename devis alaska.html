@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/devis.css">
     <title>Durée séjour</title>
 </head>
+
 <body>
     <header>
         <a href="index.html" class="logo">
@@ -15,7 +17,8 @@
         </a>
         <div id="compte_agence">
             <a href="mon compte.html"><img src="img/contacts.png" alt="compte" title="compte">Mon compte</a>
-            <a href="#nous_trouver"><img src="img/geolocalisation.jpg" alt="geolocalisation" title="geolocalisation">Agences</a>
+            <a href="#nous_trouver"><img src="img/geolocalisation.jpg" alt="geolocalisation"
+                    title="geolocalisation">Agences</a>
         </div>
         <a href=""><img src="img/telephone.jpg" alt="telephone" title="telephone">0948141516</a>
         <div class="break"></div>
@@ -26,7 +29,8 @@
             <input type="checkbox" name="mobile" id="mobile" role="button">
             <div id="menu_cache">
                 <ul>
-                    <li><a href="mon compte.html" class="bouton_lien"><img src="img/contacts.png" alt="compte">Mon compte</a></li>
+                    <li><a href="mon compte.html" class="bouton_lien"><img src="img/contacts.png" alt="compte">Mon
+                            compte</a></li>
                     <li><a href="croisiere.html" class="bouton_lien">Croisières</a></li>
                     <li><a href="sejour.html" class="bouton_lien">Séjour</a></li>
                     <li><a href="camping.html" class="bouton_lien">Camping</a></li>
@@ -41,7 +45,8 @@
                         </ul>
                     </li>
                     <li><a href="bons plans.html" class="bouton_lien">Bons&nbsp;plans</a></li>
-                    <li><a href="tel:+33948141516" class="bouton_lien bouton_telephone"><img src="img/telephone.jpg">0948141516</a>
+                    <li><a href="tel:+33948141516" class="bouton_lien bouton_telephone"><img
+                                src="img/telephone.jpg">0948141516</a>
                     </li>
                 </ul>
             </div>
@@ -51,45 +56,61 @@
     <main>
         <fieldset>
             <legend>Eléments vous concernant</legend>
-        <form action="post" method="php.machin">
-            <div class="champ">
-                <label for="Nom">Nom</label>
-                <input type="text" class="form_focus" id="Nom" name="Nom" required></div>
-            <div class="champ">
-                <label for="Prenom">Prénom</label>
-                <input type="text" class="form_focus" id="Prenom" name="Prenom" required></div>
-            <div class="champ">
-                <label for="mail">Votre email</label>
-                <input type="text" class="form_focus" id="mail" name="mail" required></div>
-            <div class="champ">
-                <label for="telephone">Téléphone</label> 
-                <input type="text" class="form_focus" id="telephone" name="telephone" required></div>
-            <div>    
-                <label for="paiement">Mode de paiement</label> 
-                <input type="string" name="paiement" class="form_focus" id="paiement" size="30" required placeholder =" virement, CB, Paypal, chèque" /></div>
+            <form action="post" method="php.machin">
+                <div class="champ">
+                    <label for="Nom">Nom</label>
+                    <input type="text" class="form_focus" id="Nom" name="Nom" required>
+                </div>
+                <div class="champ">
+                    <label for="Prenom">Prénom</label>
+                    <input type="text" class="form_focus" id="Prenom" name="Prenom" required>
+                </div>
+                <div class="champ">
+                    <label for="mail">Votre email</label>
+                    <input type="text" class="form_focus" id="mail" name="mail" required>
+                </div>
+                <div class="champ">
+                    <label for="telephone">Téléphone</label>
+                    <input type="text" class="form_focus" id="telephone" name="telephone" required>
+                </div>
+                <div>
+                    <label for="paiement">Mode de paiement</label>
+                    <input type="string" name="paiement" class="form_focus" id="paiement" size="30" required
+                        placeholder=" virement, CB, Paypal, chèque" />
+                </div>
         </fieldset>
         <fieldset>
             <label for="nbre_jours">Faites votre choix</label>
             <select name="nombre" id="nbre_jours">
                 <option value="">Choisissez une option</option>
-            <optgroup label="nbre jours">
-                <option  value="1 jour">1 jour</option>
-                <option  value="2 jours">2 jours</option>
-                <option  value="3 jours">3 jours</option>
-                <option  value="4 jours">4 jours</option>
-                <option  value="5 jours">5 jours</option>
-                <option  value="6 jours">6 jours</option>
-            </optgroup>
-            <optgroup label="nbre semaine(s)">
-                <option  value="1 semaine">1 semaine</option>
-                <option  value="2 semaines">2 semaines</option>
-                <option  value="3 semaines">3 semaine</option>
-            </optgroup>
+                <optgroup label="nbre jours">
+                    <option value="1 jour">1 jour</option>
+                    <option value="2 jours">2 jours</option>
+                    <option value="3 jours">3 jours</option>
+                    <option value="4 jours">4 jours</option>
+                    <option value="5 jours">5 jours</option>
+                    <option value="6 jours">6 jours</option>
+                </optgroup>
+                <optgroup label="nbre semaine(s)">
+                    <option value="1 semaine">1 semaine</option>
+                    <option value="2 semaines">2 semaines</option>
+                    <option value="3 semaines">3 semaine</option>
+                </optgroup>
                 <option value="1 mois">1 mois</option>
                 <optgroup label="TOUJOURS">
-                <option  value="en retraite">EN RETRAITE</option>
-                <option  value="testeur">Testeur de vacances</option>
-            </optgroup>
+                    <option value="en retraite">EN RETRAITE</option>
+                    <option value="testeur">Testeur de vacances</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset id = "choix_multiple">
+            <legend>Activités supplémentaires</legend>
+            <label for="activites_complementaires">Faites vos choix</label>
+            <select name="activites_complementaires" id="activites_complementaires" multiple>
+                <option value="ParcNational">Randonnée dans un des parcs nationals</option>
+                <option value="Fjords">Visiter les fjords</option>
+                <option value="Musee">Visiter le musée du Nord</option>
+                <option value="SourceThermal">Vous ressourcer dans une source thermale</option>
             </select>
         </fieldset>
         <fieldset>
@@ -99,76 +120,117 @@
             <input type="date" class="form_focus" id="depart" name="depart" /> <br />
             <label for="arrivee">Date d’arrivée période 2022: </label>
             <input type="date" class="form_focus" id="arrivee" name="arrivee" /> <br />
-            <div class="champ" >
-                <input class="form_btn" type="submit" value="Commander"/>
-                <input class="form_btn" type="reset" value="Effacer"/> 
+            <div class="champ">
+                <input class="form_btn" type="submit" value="Commander" />
+                <input class="form_btn" type="reset" value="Effacer" />
             </div>
-            </fieldset>
-            
+        </fieldset>
+
         </form>
-        
-    
-    <div class="container">
-        <h1 class="activites">Combien de jours de rêve</h1>
-        <div class="item">1 jour : <br><hr>  100 € <br><hr> petit déjeuner/repas/nuit compris</div>
-        <div class="item">2 jours : <br><hr> 200 € <br><hr> petit déjeuner/repas/nuit compris</div>
-        <div class="item">3 jours : <br><hr> 280 € <br><hr> petit déjeuner/repas/nuit compris</div>
-        <div class="item">4 jours : <br><hr> 370 € <br><hr> petit déjeuner/repas/nuit compris</div>
-        <div class="item">5 jours : <br><hr> 460 € <br><hr> petit déjeuner/repas/nuit compris</div>
-        <div class="item">6 jours : <br><hr> 550 € <br><hr> petit déjeuner/repas/nuit compris</div>
-        <div class="item">7 jours : <br><hr> 640 € <br><hr> petit déjeuner/repas/nuit compris</div>
-        <div class="item">8 jours : <br><hr> 730 € <br><hr> petit déjeuner/repas/nuit compris</div>
-        <div class="item">15 jours : <br><hr> 1350 € <br><hr> petit déjeuner/repas/nuit compris</div>
-    </div>
-    
-    
-    <div class="container">
-        <div class="activites">
-        <h1>Que voir, que faire en Alaska?</h1>
+
+
+        <div class="container">
+            <h1 class="activites">Combien de jours de rêve</h1>
+            <div class="item">1 jour : <br>
+                <hr> 100 € <br>
+                <hr> petit déjeuner/repas/nuit compris
+            </div>
+            <div class="item">2 jours : <br>
+                <hr> 200 € <br>
+                <hr> petit déjeuner/repas/nuit compris
+            </div>
+            <div class="item">3 jours : <br>
+                <hr> 280 € <br>
+                <hr> petit déjeuner/repas/nuit compris
+            </div>
+            <div class="item">4 jours : <br>
+                <hr> 370 € <br>
+                <hr> petit déjeuner/repas/nuit compris
+            </div>
+            <div class="item">5 jours : <br>
+                <hr> 460 € <br>
+                <hr> petit déjeuner/repas/nuit compris
+            </div>
+            <div class="item">6 jours : <br>
+                <hr> 550 € <br>
+                <hr> petit déjeuner/repas/nuit compris
+            </div>
+            <div class="item">7 jours : <br>
+                <hr> 640 € <br>
+                <hr> petit déjeuner/repas/nuit compris
+            </div>
+            <div class="item">8 jours : <br>
+                <hr> 730 € <br>
+                <hr> petit déjeuner/repas/nuit compris
+            </div>
+            <div class="item">15 jours : <br>
+                <hr> 1350 € <br>
+                <hr> petit déjeuner/repas/nuit compris
+            </div>
         </div>
-        <div class="item">Visite guidée<br><hr> <br><hr> 100 €</div>
-        <div class="item">Admirer la danse des baleines dans l'Océan Pacifique : <br><hr> <br><hr> 200 €</div>
-        <div class="item">Un petit tour en lancha et en mototaxi ! : <br><hr>  <br><hr> 370 €</div>
-        <div class="item">Un endroit idéal pour les amateurs de surf : <br><hr> <br><hr> 460 €</div>
+
+
+        <div class="container">
+            <div class="activites">
+                <h1>Que voir, que faire en Alaska ?</h1>
+            </div>
+            <div class="item">Randonnée dans un des parcs nationals: <br>
+                <hr> <br>
+                <hr> 20 €
+            </div>
+            <div class="item">Visiter les fjords: <br>
+                <hr> <br>
+                <hr> 200 €
+            </div>
+            <div class="item">Visiter le musée du Nord: <br>
+                <hr> <br>
+                <hr> 45 €
+            </div>
+            <div class="item">Vous ressourcer dans une source thermale: <br>
+                <hr> <br>
+                <hr> 80 €
+            </div>
         </div>
+
         <aside class="item1">
             <h2>Carte choco</h2>
             <figure class="carte_choco">
                 <div>
-                <img src="img/Carte_Choco_avec_villes.png" alt="carte_choco">
+                    <img src="img/carte alaska.jpg" alt="carte_choco">
                 </div>
-            <figcaption>
-                <p> De Bogota à Medellin, de Carthagène des indes aux paysages de l'Amazonie,<br> partez en voyage en Colombie à la découverte d'une autre Amérique du Sud.</p>
-            </figcaption>
+                <figcaption>
+                    <p> Ouvrez l’œil et soyez à l’affût tout au long des routes scéniques et des grands parcs de ce circuit en Alaska ! Hors des villes, dans les panoramas naturels du 49ème État américain, la vie sauvage se montre généreuse en rencontres pour les pacifiques trappeurs que vous êtes.</p>
+                </figcaption>
             </figure>
         </aside>
-    <footer>
-        <div class="grid">
-            <form id="newsletter" action="post" for="machin.php">
-                <label for="mail">Recevez votre newsletter</label>
-                <div>
-                    <input type="mail" name="mail" id="mail" placeholder="Entrez votre mail" required>
-                    <input type="submit" value="OK">
+        <footer>
+            <div class="grid">
+                <form id="newsletter" action="post" for="machin.php">
+                    <label for="mail">Recevez votre newsletter</label>
+                    <div>
+                        <input type="mail" name="mail" id="mail" placeholder="Entrez votre mail" required>
+                        <input type="submit" value="OK">
+                    </div>
+                </form>
+                <div id="informations_agence">
+                    <p>
+                        Informations agence
+                    </p>
+                    <a href="#">Nous connaitre</a>
+                    <a href="#">Nos partenaires</a>
+                    <a href="#">Nos brochures</a>
                 </div>
-            </form>
-            <div id="informations_agence">
-                <p>
-                    Informations agence
-                </p>
-                <a href="#">Nous connaitre</a>
-                <a href="#">Nos partenaires</a>
-                <a href="#">Nos brochures</a>
+                <a href="#" id="offres_entreprise">Offres entreprises / CSE</a>
+                <a href="#" id="Nos_formules">Nos formules / Offres</a>
+                <a href="#" id="Infos_pratiques">Infos pratiques / Info covid</a>
+                <div id="paiements">
+                    <img src="img/moyens de paiement.png" alt="moyens de paiement" title="paiements">
+                    <img src="img/ancv.png" alt="ancv" title="ancv">
+                </div>
             </div>
-            <a href="#" id="offres_entreprise">Offres entreprises / CSE</a>
-            <a href="#" id="Nos_formules">Nos formules / Offres</a>
-            <a href="#" id="Infos_pratiques">Infos pratiques / Info covid</a>
-            <div id="paiements">
-                <img src="img/moyens de paiement.png" alt="moyens de paiement" title="paiements">
-                <img src="img/ancv.png" alt="ancv" title="ancv">
-            </div>
-        </div>
-        <p>Copyright</p>
-    </footer>
+            <p>Copyright</p>
+        </footer>
 </body>
 <script src="JS/header.js"></script>
+
 </html>

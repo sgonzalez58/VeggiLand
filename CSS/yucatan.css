@@ -282,7 +282,6 @@ footer a {
     }
 
     nav div > ul > li:nth-child(1),
-    nav div > ul > li:nth-child(2),
     nav div > ul > li:last-child {
         display: none;
     }
