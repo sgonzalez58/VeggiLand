@@ -5,10 +5,10 @@ let clique = false;
 window.onscroll = function () { menu_rangement() };
 
 function menu_rangement() {
-    if (window.scrollY > 100 && !clique && screen.width >= 1024) {
+    if (window.scrollY > 100 && !clique && (screen.width >= 1024 && window.innerWidth >= 1024)) {
         rangement.checked = true;
         bouton_rangement.style.display = "block";
-    } else if (window.scrollY == 0 && screen.width >= 1024) {
+    } else if (window.scrollY == 0 && (screen.width >= 1024 && window.innerWidth >= 1024 && document.body.clientWidth >= 1024)) {
         rangement.checked = false;
         clique = false;
         bouton_rangement.style.display = "none";
