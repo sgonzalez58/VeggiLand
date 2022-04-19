@@ -36,10 +36,7 @@ function creation_bouton_defilement(carrousel) {
 
 async function defilement_appel(carrousel) {
     if (screen.width < 1024 || window.innerWidth < 1024) {
-        let fonctionSuivante;
-        console.log("001");
         let liste_bouton = carrousel[0].parentNode.getElementsByClassName("bouton");
-        let bouton;
         let longueur_carrousel = carrousel.length;
         for (let j = 0; j < longueur_carrousel; j++) {
             carrousel[j].style.animationPlayState = "paused";
@@ -47,6 +44,7 @@ async function defilement_appel(carrousel) {
             carrousel[j].addEventListener('animationiteration', function () {
                 carrousel[j].style.animationPlayState = "paused";
                 liste_bouton[j].style.backgroundColor = "lightgrey";
+                carrousel[j].style.animationName = "";
                 if (j == longueur_carrousel - 1)
                 {
                     carrousel[0].style.animationName = "defilement";
